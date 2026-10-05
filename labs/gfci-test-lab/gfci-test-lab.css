@@ -1,0 +1,220 @@
+.lab-content {
+    padding-bottom: 40px;
+}
+
+.lab-intro,
+.step-card,
+.bench {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 15px 16px;
+    border: 1px solid var(--wire-border);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+    box-shadow:
+        0 8px 25px var(--wire-shadow),
+        inset 0 1px 0 var(--wire-highlight);
+}
+
+.lab-label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--wire-accent-bright);
+}
+
+.lab-intro h2,
+.step-card h3 {
+    margin: 0;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--wire-text);
+}
+
+.lab-intro p,
+.step-card p {
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--wire-text-muted);
+}
+
+.lab-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--wire-text-muted);
+}
+
+.lab-progress-bar {
+    flex: 1;
+    height: 6px;
+    overflow: hidden;
+    border: 1px solid var(--wire-border);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.lab-progress-bar div {
+    width: 20%;
+    height: 100%;
+    background: var(--wire-accent);
+    transition: width 0.25s ease;
+}
+
+.bench {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.device {
+    padding: 10px 8px;
+    border: 1px solid var(--wire-border);
+    text-align: center;
+}
+
+.device-name {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--wire-text-muted);
+}
+
+.terminal-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.term {
+    flex: 1;
+    padding: 4px 0;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    border: 1px solid var(--wire-border);
+}
+
+.term.line {
+    color: #c97878;
+}
+
+.term.load {
+    color: #7aa3c7;
+}
+
+.term.active {
+    border-color: var(--wire-accent);
+    box-shadow: 0 0 8px var(--wire-accent-glow);
+}
+
+.gfci-face,
+.outlet-face,
+.switch-face {
+    height: 28px;
+    border: 1px dashed var(--wire-border);
+}
+
+.gfci-face {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    color: var(--wire-text-muted);
+}
+
+.choice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.choice-list button {
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid var(--wire-border);
+    background: var(--wire-hover-surface);
+    color: var(--wire-text);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.choice-list button:hover,
+.choice-list button.selected {
+    border-color: var(--wire-accent);
+}
+
+.choice-list button:disabled {
+    cursor: default;
+}
+
+.step-feedback {
+    margin-top: 12px !important;
+    padding: 10px 12px;
+    border: 1px solid var(--wire-border);
+}
+
+.step-feedback.correct {
+    border-color: var(--wire-accent);
+}
+
+.step-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.lab-nav-link,
+.lab-next {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--wire-text);
+    text-decoration: none;
+}
+
+.lab-next {
+    min-height: 28px;
+    padding: 0 12px;
+    border: 1px solid var(--wire-border);
+    background: var(--wire-hover-surface);
+    cursor: pointer;
+}
+
+.lab-next:hover {
+    border-color: var(--wire-accent);
+}
+
+@media (max-width: 500px) {
+    .bench {
+        grid-template-columns: 1fr;
+    }
+}
