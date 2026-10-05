@@ -190,7 +190,7 @@ body {
     padding-top: 50px;
     overflow-y: scroll; /* this fixed the shifting pages */
     background-color: var(--wire-bg);
-    background-image: url("z-images/wallpapers/gold-blue-constellation.webp");
+    background-image: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
