@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /*
        ONE LEVEL DEEP
-       /wire-lab/account/
+       /wire-lab/profile/
        /wire-lab/labs/
        /wire-lab/solar/
        /wire-lab/study/
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuPages = {
         DEBUG: "debug/debug.html",
         TOOLS: "tools/tools.html",
-        ACCOUNT: "account/account.html"
+        profile: "profile/profile.html"
     };
 
     document.querySelectorAll(".menu-item").forEach(function (link) {
@@ -144,9 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navbarProfile) {
 
-        navbarProfile.href = prefix + "account/account.html";
+        navbarProfile.href = prefix + "profile/profile.html";
 
-        if (currentPage.endsWith("/account/account.html")) {
+        if (currentPage.endsWith("/profile/profile.html")) {
     navbarProfile.classList.add("active");
 }
 

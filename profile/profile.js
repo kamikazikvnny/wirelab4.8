@@ -1,5 +1,5 @@
 /* =====================================================
-   WIRELAB — ACCOUNT PAGE
+   WIRELAB — profile PAGE
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       UPDATE ACCOUNT AVATAR
+       UPDATE profile AVATAR
     ===================================================== */
 
-    function updateAccountAvatar(iconName) {
+    function updateprofileAvatar(iconName) {
 
         if (!profileImage || !iconName) return;
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             iconName
         );
 
-        updateAccountAvatar(iconName);
+        updateprofileAvatar(iconName);
 
         updateNavbarAvatar(iconName);
 
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!savedAvatar) return;
 
-        updateAccountAvatar(savedAvatar);
+        updateprofileAvatar(savedAvatar);
 
         updateNavbarAvatar(savedAvatar);
 
@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       INITIALIZE ACCOUNT PAGE
+       INITIALIZE profile PAGE
     ===================================================== */
 
     loadProfile();

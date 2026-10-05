@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>wire-lab — Virtual Electrical Training</title>
 <link rel="stylesheet" href="../nav.css">
-<link rel="stylesheet" href="account.css">
+<link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -13,8 +13,8 @@
     <div class="navbar">
 
         <div class="navbar-avatar">
-            <a href="account.html" class="avatar-frame" id="navbar-profile">
-                <img src="z-images/profile-icons/icon-03.webp" alt="Account">
+            <a href="profile.html" class="avatar-frame" id="navbar-profile">
+                <img src="z-images/profile-icons/icon-03.webp" alt="Profile">
             </a>
         </div>
 
@@ -41,9 +41,10 @@
                 </button>
 
                 <div class="menu-panel" id="menu-panel">
+                    <a href="../profile/profile.html" class="menu-item">PROFILE</a>
                     <a href="../debug/debug.html" class="menu-item">DEBUG</a>
                     <a href="../tools/tools.html" class="menu-item">TOOLS</a>
-                    <a href="../account/account.html" class="menu-item">ACCOUNT</a>
+                    
                 </div>
             </div>
         </nav>
@@ -57,17 +58,17 @@
     </div> <!-- navbar -->
 </header>
 
-<main class="account-content page-width">
+<main class="profile-content page-width">
 
     <!-- =====================================================
          PROFILE
          ===================================================== -->
 
-    <section class="account-card profile-card">
+    <section class="profile-card profile-card">
 
-        <div class="account-card-avatar">
+        <div class="profile-card-avatar">
 
-            <div class="account-card-avatar-frame">
+            <div class="profile-card-avatar-frame">
                 <img
                     id="profile-image"
                     src="../z-images/profile-icons/icon-03.webp"
@@ -83,7 +84,7 @@
 
         <div class="profile-info">
 
-    <div class="account-brand-icon">
+    <div class="profile-brand-icon">
         <img
             src="../z-images/wirelab-logo2.png"
             alt="WireLab"
@@ -111,7 +112,7 @@
                 </div>
 
                 <div class="status-item">
-                    <strong id="account-progress-percent">0%</strong>
+                    <strong id="profile-progress-percent">0%</strong>
                     <span>Progress</span>
                 </div>
 
@@ -126,7 +127,7 @@
          PROGRESS
          ===================================================== -->
 
-    <section class="account-card progress-card">
+    <section class="profile-card progress-card">
 
         <div class="card-heading">
 
@@ -145,13 +146,13 @@
 
             <div
                 class="progress-fill"
-                id="account-progress-bar"
+                id="profile-progress-bar"
             ></div>
 
         </div>
 
         <p class="progress-text">
-            <span id="account-completed-units">0</span>
+            <span id="profile-completed-units">0</span>
             of 35 units completed
         </p>
 
@@ -162,7 +163,7 @@
          STATS
          ===================================================== -->
 
-    <section class="account-stats">
+    <section class="profile-stats">
 
         <div class="stat-card">
 
@@ -199,7 +200,7 @@
          QUICK ACCESS
          ===================================================== -->
 
-    <section class="account-card quick-access-card">
+    <section class="profile-card quick-access-card">
 
         <h2>QUICK ACCESS</h2>
 
@@ -234,7 +235,7 @@
          SETTINGS
          ===================================================== -->
 
-    <section class="account-card settings-card">
+    <section class="profile-card settings-card">
 
         <h2>PROGRESS MANAGEMENT</h2>
 
@@ -603,7 +604,7 @@
 
 
 <script src="../nav.js"></script>
-<script src="account.js"></script>
+<script src="profile.js"></script>
 
 </body>
 </html>
