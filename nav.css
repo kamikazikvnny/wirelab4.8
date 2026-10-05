@@ -59,10 +59,45 @@
 
 
 /* =====================================================
+   TEST — ANSWER COLORS
+===================================================== */
+
+/* CORRECT ANSWER */
+.answer-choice.correct {
+    border-color: rgba(80, 220, 120, 0.85);
+    box-shadow: 0 0 8px rgba(80, 220, 120, 0.20);
+}
+
+
+/* INCORRECT ANSWER */
+.answer-choice.incorrect {
+    border-color: rgba(230, 70, 70, 0.55);
+    box-shadow: 0 0 8px rgba(230, 70, 70, 0.12);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
    NAVBAR
 ===================================================== */
 .navbar {
-    width: min(600px, calc(100% - 20px));
+     width: calc(100% - 4px);
     max-width: none;
     height: 28px;
     margin-left: auto;
@@ -313,7 +348,8 @@ body {
     min-width: 0;
 
     gap: 12px;
-    margin-left: 0;
+    margin-left: auto; /* keeps logo + bulb locked and links centered */
+    margin-right: auto; /* keeps logo + bulb locked and links centered */
 
     overflow: visible;
 }

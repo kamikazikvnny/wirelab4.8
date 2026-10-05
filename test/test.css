@@ -343,7 +343,7 @@
         border-color 0.15s ease;
 }
 
-.answer-choices button:hover {
+.answer-choices button:not(:disabled):hover {
     background: var(--wire-hover-surface);
     border-color: var(--wire-accent);
 }
@@ -363,8 +363,8 @@
     border: 1px solid var(--wire-border);
 
     background:
-        rgba(255, 255, 255, 0.025);
-
+        rgba(255, 255, 255, 0.075);
+    
     font-size: 12px;
     line-height: 1.5;
 

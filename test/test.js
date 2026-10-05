@@ -1704,6 +1704,8 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedButton
     ) {
 
+        
+
         const buttons =
             answerChoices.querySelectorAll(
                 ".answer-choice"
@@ -1727,12 +1729,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (isCorrect) {
 
-            selectedButton.classList.add(
-                "correct"
-            );
+            selectedButton.classList.add("correct");
 
-            answerFeedback.innerHTML =
-                `
+
+answerFeedback.innerHTML = `
                 <strong>CORRECT!</strong>
                 <br>
                 ${currentQuestion.explanation}
@@ -1742,18 +1742,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else {
 
-            selectedButton.classList.add(
-                "incorrect"
-            );
+            selectedButton.classList.add("incorrect");
+buttons[currentQuestion.answer].classList.add("correct");
 
-            buttons[
-                currentQuestion.answer
-            ].classList.add(
-                "correct"
-            );
 
-            answerFeedback.innerHTML =
-                `
+answerFeedback.innerHTML = `
                 <strong>NOT QUITE.</strong>
                 <br>
                 ${currentQuestion.explanation}
