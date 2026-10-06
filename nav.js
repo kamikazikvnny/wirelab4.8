@@ -292,4 +292,13 @@ if (menuButton && menuPanel) {
         });
     }
 
+    /* stops page from jumping to the top when clicking bad links  */
+    document.querySelectorAll('a[href="#"], a:not([href])').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+    });
+    });
+    /* stops page from jumping to the top when clicking bad links  */
+
+
 });

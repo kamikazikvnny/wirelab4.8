@@ -39,10 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     function getAvatarPath(iconName) {
-
-        return "../z-images/profile-icons/" + iconName;
-
-    }
+    return "../z-images/profile-icons/" + iconName;
+}
 
 
     /* =====================================================
@@ -113,20 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function loadAvatar() {
 
-        const savedAvatar =
-            localStorage.getItem(PROFILE_ICON_KEY);
+    let savedAvatar =
+        localStorage.getItem(PROFILE_ICON_KEY) || "icon-03.webp";
 
-        if (!savedAvatar) return;
+    const testImage = new Image();
+
+    testImage.onload = () => {
 
         updateprofileAvatar(savedAvatar);
-
         updateNavbarAvatar(savedAvatar);
 
         if (modalProfileImage) {
-
             modalProfileImage.src =
                 getAvatarPath(savedAvatar);
-
         }
 
         profileOptions.forEach((option) => {
@@ -135,18 +132,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 option.getAttribute("data-icon");
 
             if (icon === savedAvatar) {
-
                 option.classList.add("selected");
-
             } else {
-
                 option.classList.remove("selected");
-
             }
 
         });
 
-    }
+    };
+
+    testImage.onerror = () => {
+
+        savedAvatar = "icon-03.webp";
+
+        localStorage.setItem(
+            PROFILE_ICON_KEY,
+            savedAvatar
+        );
+
+        updateprofileAvatar(savedAvatar);
+        updateNavbarAvatar(savedAvatar);
+
+        if (modalProfileImage) {
+            modalProfileImage.src =
+                getAvatarPath(savedAvatar);
+        }
+
+    };
+
+    testImage.src =
+        getAvatarPath(savedAvatar);
+}
 
 
     /* =====================================================
