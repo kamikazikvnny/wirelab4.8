@@ -84,7 +84,7 @@
 .navbar {
      width: calc(100% - 4px);
     max-width: none;
-    height: 28px;
+    height: 38px;
     margin-left: auto;
     margin-right: auto;
     min-width: 0;
@@ -109,8 +109,8 @@
    NAVBAR AVATAR & FRAME
 ===================================================== */
 .avatar-frame {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     transform: translateX(-7px);
     display: flex;
     align-items: center;

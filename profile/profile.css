@@ -149,7 +149,7 @@
 ===================================================== */
 
 .edit-button {
-    padding: 2px 7px;
+    padding: 1px 25px;
 
     border: 1px solid var(--wire-border);
 
@@ -160,6 +160,7 @@
     font-family: inherit;
     font-size: 9px;
     font-weight: 300;
+    transform: translateY(-6px);
 
     cursor: pointer;
 
@@ -195,8 +196,10 @@
 
     color: var(--wire-accent);
 
+    font-family: "Reddit Sans", sans-serif;
     font-size: 20px;
-    line-height: 1.2;
+    font-weight: 10;
+    line-height: 1;
 
     text-shadow:
         0 0 8px var(--wire-accent-glow-soft);
