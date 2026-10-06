@@ -1,5 +1,5 @@
 /* =====================================================
-   WIRELAB — STUDY PROGRESS
+   WIRELAB — study PROGRESS
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* -------------------------------------------------
-       STUDY UNIT CARDS
+       study UNIT CARDS
     ------------------------------------------------- */
 
     const unitCards =
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         /* -------------------------------------------------
-           NORMAL STUDY UNITS
+           NORMAL study UNITS
         ------------------------------------------------- */
 
         if (isCompleted) {
@@ -181,28 +181,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* -------------------------------------------------
-       REMEMBER STUDY PAGE POSITION
+       REMEMBER study PAGE POSITION
     ------------------------------------------------- */
 
-    const STUDY_SCROLL_KEY = "wirelabStudyScrollPosition";
+    const study_SCROLL_KEY = "wirelabstudyScrollPosition";
 
 
-    /* Save position when leaving Study */
+    /* Save position when leaving study */
 
     window.addEventListener("beforeunload", () => {
 
         sessionStorage.setItem(
-            STUDY_SCROLL_KEY,
+            study_SCROLL_KEY,
             window.scrollY
         );
 
     });
 
 
-    /* Restore position when returning to Study */
+    /* Restore position when returning to study */
 
     const savedScrollPosition =
-        sessionStorage.getItem(STUDY_SCROLL_KEY);
+        sessionStorage.getItem(study_SCROLL_KEY);
 
     if (savedScrollPosition !== null) {
 

@@ -4,16 +4,17 @@
 ===================================================== */
 :root {
     /* PAGE BACKGROUND */
-    --wire-bg: #141a1f;
+    --wire-bg: #0c111b;
 
     /* SURFACES */
     --wire-surface: hsl(302, 86%, 53%); /**/
-    --wire-hover-surface: #252e35ce; /* nav tab active color */
-    --wire-nav-surface: #252e35ce; /* navbar color */
+    --wire-hover-surface: #4e4e4e; /* nav tab active color */
+    --wire-nav-surface: #0c111b;
+    --wire-completed-surface: #7a9a7a30; /* completed units */
 
     /* TEXT */
-    --wire-text: #80878e; /**/
-    --wire-text-muted: #747474fb; /* font color - navbar page tabs */
+    --wire-text: #ffffff; /**/
+    --wire-text-muted: #fffffffb; /* font color - navbar page tabs */
 
     /* ACCENT */
     --wire-accent: #e7e7e7e5; /* top of navbar highlight */
@@ -23,7 +24,7 @@
     --wire-accent-glow-subtle: rgba(217, 154, 43, 0.10); /**/
 
     /* BORDERS */
-    --wire-border: #e7e7e72c; /**/
+    --wire-border: #cdcecf; /**/
 
     /* SHADOWS */
     --wire-shadow: rgba(0, 0, 0, 0.45); /**/
@@ -42,7 +43,7 @@
     --wire-hover-surface: rgb(190, 185, 169);
     --wire-nav-surface: rgba(205, 201, 187, 0.745); /* navbar color */
 
-    --wire-text: #322f1e;
+    --wire-text: #ffffff;
     --wire-text-muted: #2f2c1b;
 
     --wire-accent: #5e4d2e; /* top of navbar highlight */
@@ -82,9 +83,9 @@
    NAVBAR
 ===================================================== */
 .navbar {
-     width: calc(100% - 4px);
+    width: 100%;
     max-width: none;
-    height: 38px;
+    height: 34px;
     margin-left: auto;
     margin-right: auto;
     min-width: 0;
@@ -97,7 +98,7 @@
 
     position: relative;
 
-    border: 1px solid var(--wire-border);
+    border-bottom: 1px solid #1f2c46cf;
     background: var(--wire-nav-surface);
 
     pointer-events: auto;
@@ -109,20 +110,21 @@
    NAVBAR AVATAR & FRAME
 ===================================================== */
 .avatar-frame {
-    width: 30px;
-    height: 30px;
-    transform: translateX(-7px);
+    width: 29px;
+    height: 29px;
+    transform: translateX(-1px);
+    transform: translateY(2px);
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--wire-border);
-    box-shadow:
-        0 0 12px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
+
+
 }
 .avatar-frame:hover {
     background: var(--wire-hover-surface);
     border-color: var(--wire-accent);
+    border-radius: 4px;
 }
 
 
@@ -145,7 +147,7 @@
     color: var(--wire-text-muted);
     text-decoration: none;
 
-    font-family: "Rajdhani", sans-serif;
+    font-family:
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -155,24 +157,11 @@
 
     background: transparent;
 
+
     
 }
 
-.menu-button {
-    min-width: 22px;
-    width: 22px;
-    height: 22px;
 
-    padding: 0;
-
-    border: none;
-    background: transparent;
-
-    font-size: 16px;
-    line-height: 1;
-
-    cursor: pointer;
-}
 
 
 /* =====================================================
@@ -229,7 +218,7 @@ body {
     right: 0;
     width: 100%;
 
-    padding: 10px 0;
+    padding: 0px 0;
     z-index: 9999;
     background: transparent;
     pointer-events: none;
@@ -240,62 +229,17 @@ body {
 
 
 
-/* =====================================================
-   GOLD TECH LINE
-===================================================== */
-
-.navbar::before {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--wire-accent) 30%,
-            var(--wire-accent-bright) 50%,
-            var(--wire-accent) 70%,
-            transparent
-        );
-
-    opacity: 0.7;
-}
-
-
-
-/* =====================================================
-   BRAND
-===================================================== */
-
-.brand {
-    display: flex;
-    align-items: center;
-
-    gap: 5px;
-
-    flex: 0 0 auto;
-    min-width: 0;
-
-    position: relative;
-    z-index: 2;
-    transform: translateX(-6px);
-}
 
 /* =====================================================
    BRAND Lightning ICON
 ===================================================== */
 
 .brand-icon img {
-    width: 60px;
+    width: 20px;
     height: 60px;
     opacity: 0.9;
     object-fit: contain;
+    transform: translateX(-8px);
 }
 
 /* =====================================================
@@ -407,29 +351,47 @@ body {
     color: var(--wire-text);
 }
 
-/* =====================================================
-   MENU PANEL
-===================================================== */
+
+.menu-button {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 0;
+    cursor: pointer;
+    transform: translateX(-4px);
+}
+
+.menu-button:hover {
+    background: var(--wire-hover-surface);
+    border-radius: 4px;
+}
+
+.nav-button.active {
+    background: var(--wire-hover-surface);
+    border-color: var(--wire-accent);
+    border-width: 2px;
+
+    box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.15),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.30);
+
+    text-shadow: 0 0 8px var(--wire-accent-glow-soft);
+}
+
 .menu-panel {
     display: none;
-
     position: absolute;
-
     top: 34px;
-    right: 0px;
-
-    min-width: 120px;
-
+    left: 0;
+    min-width: 100px;
     padding: 6px;
-
     border: 1px solid var(--wire-border);
     background: var(--wire-nav-surface);
 
-    box-shadow:
-        0 8px 20px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
-
-    z-index: 10000;
 }
 
 .menu-container {
@@ -444,7 +406,7 @@ body {
 }
 
 .menu-item {
-    padding: 7px 10px;
+    padding: 6px 6px;
 
     color: var(--wire-text-muted);
     text-decoration: none;
@@ -460,6 +422,7 @@ body {
 .menu-item:hover {
     color: var(--wire-text);
     background: var(--wire-hover-surface);
+    border-radius: 4px;
 }
 
 
