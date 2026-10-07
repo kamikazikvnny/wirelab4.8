@@ -22,20 +22,10 @@
     padding: 16px;
 
     border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.07),
-            rgba(255, 255, 255, 0.025)
-        );
+    background: var(--wire-panel);
 
     box-shadow:
-        0 8px 25px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+        0 8px 25px var(--wire-shadow);
 
     overflow: hidden;
 }
@@ -53,7 +43,7 @@
     font-weight: 700;
     letter-spacing: 1.5px;
 
-    color: var(--wire-accent-bright);
+    color: var(--wire-accent);
 }
 
 
@@ -70,10 +60,7 @@
     line-height: 1.15;
     letter-spacing: 1px;
 
-    color: var(--wire-text);
-
-    text-shadow:
-        0 0 10px var(--wire-text-glow);
+    color: var(--wire-text-bright);
 }
 
 
@@ -87,7 +74,7 @@
     font-size: 12px;
     line-height: 1.55;
 
-    color: var(--wire-text-muted);
+    color: var(--wire-text);
 }
 
 .unit02-text:last-child {
@@ -105,20 +92,10 @@
     padding: 16px;
 
     border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.055),
-            rgba(255, 255, 255, 0.018)
-        );
+    background: var(--wire-panel);
 
     box-shadow:
-        0 8px 25px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+        0 8px 25px var(--wire-shadow);
 
     overflow: hidden;
 }
@@ -144,20 +121,10 @@
 
 .unit02-concept {
     width: 100%;
-
     padding: 13px;
 
     border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.045),
-            rgba(255, 255, 255, 0.015)
-        );
-
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    background: var(--wire-bg);
 
     overflow: hidden;
 }
@@ -176,7 +143,7 @@
     line-height: 1.2;
     letter-spacing: 0.6px;
 
-    color: var(--wire-text);
+    color: var(--wire-text-bright);
 }
 
 
@@ -188,7 +155,7 @@
     font-size: 12px;
     line-height: 1.5;
 
-    color: var(--wire-text-muted);
+    color: var(--wire-text);
 }
 
 
@@ -202,20 +169,10 @@
     padding: 16px;
 
     border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.055),
-            rgba(255, 255, 255, 0.018)
-        );
+    background: var(--wire-panel);
 
     box-shadow:
-        0 8px 25px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+        0 8px 25px var(--wire-shadow);
 
     overflow: hidden;
 }
@@ -227,22 +184,18 @@
 
 .unit02-question {
     width: 100%;
-
     margin-bottom: 10px;
-
     padding: 13px;
 
     border: 1px solid var(--wire-border);
-
-    background:
-        rgba(255, 255, 255, 0.025);
+    background: var(--wire-bg);
 
     font-family: "Rajdhani", sans-serif;
     font-size: 17px;
     font-weight: 700;
     line-height: 1.35;
 
-    color: var(--wire-text);
+    color: var(--wire-text-bright);
 }
 
 
@@ -252,18 +205,15 @@
 
 .unit02-answer {
     width: 100%;
-
     padding: 13px;
 
     border-left: 2px solid var(--wire-accent);
-
-    background:
-        rgba(255, 255, 255, 0.025);
+    background: var(--wire-bg);
 
     font-size: 12px;
     line-height: 1.55;
 
-    color: var(--wire-text-muted);
+    color: var(--wire-text);
 }
 
 
@@ -282,7 +232,7 @@
 
 
 /* =========================================================
-   BACK BUTTON
+   BACK / COMPLETE BUTTONS
 ========================================================= */
 
 .unit02-back,
@@ -297,10 +247,9 @@
     padding: 0 12px;
 
     border: 1px solid var(--wire-border);
+    background: var(--wire-panel);
 
-    background: var(--wire-hover-surface);
-
-    color: var(--wire-text);
+    color: var(--wire-text-bright);
 
     font-family: "Rajdhani", sans-serif;
     font-size: 10px;
@@ -313,7 +262,8 @@
 
     transition:
         background 0.15s ease,
-        border-color 0.15s ease;
+        border-color 0.15s ease,
+        color 0.15s ease;
 }
 
 
@@ -322,12 +272,7 @@
 ========================================================= */
 
 .unit02-complete {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.07),
-            rgba(255, 255, 255, 0.025)
-        );
+    background: var(--wire-panel);
 }
 
 
@@ -337,9 +282,9 @@
 
 .unit02-back:hover,
 .unit02-complete:hover {
-    background: var(--wire-hover-surface);
+    background: var(--wire-slate);
     border-color: var(--wire-accent);
-    color: var(--wire-text);
+    color: var(--wire-text-bright);
 }
 
 
@@ -349,7 +294,6 @@
 
 .unit02-complete.completed {
     border-color: var(--wire-accent);
-
     color: var(--wire-accent);
 
     box-shadow:

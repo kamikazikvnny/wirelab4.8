@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const menuPages = {
+        PROFILE: "profile/profile.html",
         DEBUG: "debug/debug.html",
-        TOOLS: "tools/tools.html",
-        profile: "profile/profile.html"
+        TOOLS: "tools/tools.html"
     };
 
     document.querySelectorAll(".menu-item").forEach(function (link) {
@@ -110,6 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (brandImage) {
         brandImage.src = prefix + "z-images/wirelab-logo2.png";
     }
+
+    const settingsIcon = document.querySelector("#settings-icon");
+
+if (settingsIcon) {
+    settingsIcon.src = prefix + "z-images/settings-icon.webp";
+}
 
 
     /* =====================================================
@@ -199,6 +205,71 @@ if (menuButton && menuPanel) {
     });
 }
 
+
+/* =====================================================
+   SETTINGS MENU
+===================================================== */
+
+const settingsButton =
+    document.getElementById("settings-button");
+
+const settingsPanel =
+    document.getElementById("settings-panel");
+
+if (settingsButton && settingsPanel) {
+
+    /* =================================================
+       SETTINGS LINKS
+    ================================================= */
+
+    const settingsPages = {
+        SETTINGS: "settings/settings.html",
+        PROFILE: "profile/profile.html"
+    };
+
+    document.querySelectorAll(".settings-item").forEach(function (link) {
+
+        const label =
+            (link.textContent || "").trim().toUpperCase();
+
+        if (settingsPages[label]) {
+            link.href = prefix + settingsPages[label];
+        }
+
+    });
+
+
+    /* =================================================
+       OPEN / CLOSE SETTINGS
+    ================================================= */
+
+    settingsButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        settingsPanel.classList.toggle("open");
+
+    });
+
+
+    /* =================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ================================================= */
+
+    document.addEventListener("click", function () {
+
+        settingsPanel.classList.remove("open");
+
+    });
+
+
+    settingsPanel.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+    });
+
+}
 
 
 
@@ -302,3 +373,4 @@ if (menuButton && menuPanel) {
 
 
 });
+

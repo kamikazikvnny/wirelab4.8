@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Settings — WireLab</title>
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+<header class="site-header">
+    <div class="navbar">
+        <div class="menu-container">
+            <button
+                type="button"
+                class="nav-button menu-button"
+                id="menu-button"
+                aria-label="Open menu"
+                title="Menu">
+                ☰
+            </button>
+
+            <div class="menu-panel" id="menu-panel">
+                <a href="profile/profile.html" class="menu-item">Profile</a>
+                <a href="debug/debug.html" class="menu-item">Debug</a>
+                <a href="tools/tools.html" class="menu-item">Tools</a>
+            </div>
+        </div>
+
+        <div class="navbar-avatar">
+            <a href="index.html" class="avatar-frame" id="navbar-profile">
+                <img src="z-images/profile-icons/icon-03.webp" alt="profile">
+            </a>
+        </div>
+
+        <nav class="site-navigation">
+                <a data-page="home" class="nav-button">HOME</a>
+                <a data-page="study" class="nav-button">STUDY</a>
+                <a data-page="labs" class="nav-button">LABS</a>
+                <a data-page="test" class="nav-button">TEST</a>
+        </nav>
+
+        <div class="settings-container">
+
+    <button
+        type="button"
+        class="settings-button"
+        id="settings-button"
+        aria-label="Settings"
+        title="Settings">
+        ⚙
+    </button>
+
+    <div class="settings-panel" id="settings-panel">
+        <a href="settings/settings.html" class="settings-item">Settings</a>
+        <a href="profile/profile.html" class="settings-item">Profile</a>
+    </div>
+
+</div>
+
+        <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Switch to light theme"
+            title="Switch theme"> 💡 </button>
+    </div> <!-- navbar -->
+</header>
+
+
+    <!-- =====================================================
+         WIRELAB — SETTINGS CONTENT
+    ====================================================== -->
+
+    <main class="settings-content page-width">
+
+        <section class="settings-card">
+
+            <h1>SETTINGS</h1>
+
+            <p class="settings-description">
+                Customize your WireLab experience.
+            </p>
+
+
+            <!-- =================================================
+                 GENERAL
+            ================================================== -->
+
+            <div class="settings-section">
+
+                <h2>GENERAL</h2>
+
+                <div class="settings-row">
+
+                    <div class="settings-row-text">
+
+                        <h3>Units</h3>
+
+                        <p>
+                            Choose the measurement system used throughout WireLab.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="settings-control">
+                        US
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 APPEARANCE
+            ================================================== -->
+
+            <div class="settings-section">
+
+                <h2>APPEARANCE</h2>
+
+                <div class="settings-row">
+
+                    <div class="settings-row-text">
+
+                        <h3>Theme</h3>
+
+                        <p>
+                            Switch between dark and light themes.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="settings-control"
+                        id="settings-theme">
+                        AUTO
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ABOUT
+            ================================================== -->
+
+            <div class="settings-section">
+
+                <h2>ABOUT</h2>
+
+                <div class="settings-row">
+
+                    <div class="settings-row-text">
+
+                        <h3>WireLab</h3>
+
+                        <p>
+                            Electrical training tools, study material,
+                            labs, and testing.
+                        </p>
+
+                    </div>
+
+                    <span class="settings-version">
+                        v3.24
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         WIRELAB — JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../nav.js"></script>
+    <script src="../settings/settings.js"></script>
+
+</body>
+
+</html>

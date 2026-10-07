@@ -1,37 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+/* =====================================================
+   WIRELAB — TYPOGRAPHY
+===================================================== */
+h1 {
+    font-size: 28px;
+    font-weight: 300;}
+h2 {
+    font-size: 22px;
+    font-weight: 300;}
+h3 {
+    font-size: 18px;
+    font-weight: 300;}
+body {
+    font-size: 14px;
+    font-weight: 300;}
+
 /* =====================================================
    WIRELAB — DARK THEME
 ===================================================== */
 :root {
-    /* PAGE BACKGROUND */
-    --wire-bg: #0c111b;
+    --wire-bg: #0F1113;
 
-    /* SURFACES */
-    --wire-surface: hsl(302, 86%, 53%); /**/
-    --wire-hover-surface: #4e4e4e; /* nav tab active color */
-    --wire-nav-surface: #0c111b;
-    --wire-completed-surface: #7a9a7a30; /* completed units */
+    --wire-text: #D7DADC;
+    --wire-text-muted: #8B9197;
+    --wire-text-bright: #F1F3F5;
 
-    /* TEXT */
-    --wire-text: #ffffff; /**/
-    --wire-text-muted: #fffffffb; /* font color - navbar page tabs */
+    --wire-border: #2A2D31;
+    --wire-border-accent: #4A4F55;
 
-    /* ACCENT */
-    --wire-accent: #e7e7e7e5; /* top of navbar highlight */
-    --wire-accent-bright: #d1d0d01f; /* active tab text color */
-    --wire-accent-glow: rgba(202, 226, 245, 0.868); /* avatar frame glow */
-    --wire-accent-glow-soft: rgba(242, 184, 75, 0.18); /**/
-    --wire-accent-glow-subtle: rgba(217, 154, 43, 0.10); /**/
+    --wire-hover: #24272B;
+    --wire-active: #30343A;
 
-    /* BORDERS */
-    --wire-border: #cdcecf; /**/
+    --wire-accent: #b9a979;
 
-    /* SHADOWS */
-    --wire-shadow: rgba(0, 0, 0, 0.45); /**/
-    --wire-text-glow: rgba(230, 233, 236, 0.08); /**/
-    --wire-highlight: rgba(255, 255, 255, 0.10); /**/
+    --wire-shadow: rgba(0, 0, 0, 0.35);
 }
-
 
 /* =====================================================
    LIGHT THEME
@@ -98,8 +105,8 @@
 
     position: relative;
 
-    border-bottom: 1px solid #1f2c46cf;
-    background: var(--wire-nav-surface);
+    border-bottom: 1px solid var(--wire-border);
+    background: var(--wire-bg);
 
     pointer-events: auto;
     overflow: visible;
@@ -122,14 +129,14 @@
 
 }
 .avatar-frame:hover {
-    background: var(--wire-hover-surface);
+    background: var(--wire-hover);
     border-color: var(--wire-accent);
     border-radius: 4px;
 }
 
 
 /* =====================================================
-   NAV BUTTON LINKS
+   NAV BUTTONS
 ===================================================== */
 .nav-button {
     position: relative;
@@ -139,17 +146,16 @@
     justify-content: center;
 
     flex: 0 0 auto;
-    min-width: 22px;
-    min-height: 22px;
 
-    padding: 0 2px;
+    min-width: 44px;
+    height: 24px;
+
+    padding: 0 8px;
 
     color: var(--wire-text-muted);
     text-decoration: none;
 
-    font-family:
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 10px;
     letter-spacing: 0.8px;
 
     white-space: nowrap;
@@ -157,10 +163,37 @@
 
     background: transparent;
 
+    border: 1px solid transparent;
+    border-radius: 4px;
 
-    
+    cursor: pointer;
+
+    transition:
+        color 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
 }
 
+
+/* =====================================================
+   NAV BUTTONS HOVER
+===================================================== */
+.nav-button:hover {
+    color: var(--wire-text-bright);
+    background: var(--wire-hover);
+    border-color: var(--wire-text-bright);
+}
+
+/* =====================================================
+   NAV BUTTONS ACTIVE
+===================================================== */
+.nav-button.active {
+    color: var(--wire-text-bright);
+
+    background: var(--wire-active);
+
+    border-color: var(--wire-accent);
+}
 
 
 
@@ -183,10 +216,11 @@ img {
 ===================================================== */
 main,
 .page-width {
-    width: calc(100% - 8px);
-    max-width: none;
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
     box-sizing: border-box;
 }
 
@@ -248,15 +282,10 @@ body {
 
 .brand h1 {
     margin: 0;
-
     font-size: 17px;
-    font-weight: 700;
     letter-spacing: 1.5px;
-
     color: var(--wire-text);
-
     white-space: nowrap;
-
     text-shadow:
         0 1px 12px var(--wire-text-glow);
 }
@@ -292,25 +321,102 @@ body {
     display: none;
 }
 
-/* =====================================================
-   NAV HOVER
-===================================================== */
-.nav-button:hover {
+
+
+
+
+
+.settings-button {
+    width: 20px;
+    height: 20px;
+
+    margin-left: 2px;
+    margin-right: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    background: transparent;
+
+    color: var(--wire-text-muted);
+
+    font-size: 15px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.settings-button:hover {
     color: var(--wire-text);
     background: var(--wire-hover-surface);
     border-color: var(--wire-accent);
 }
 
-/* =====================================================
-   ACTIVE NAV BUTTON
-===================================================== */
-.nav-button.active {
-    background: var(--wire-hover-surface);
-    border-color: var(--wire-accent);
-    border-width: 2px;
 
-    text-shadow:
-        0 0 8px var(--wire-accent-glow-soft);
+
+
+
+
+/* =====================================================
+   WIRELAB — SETTINGS MENU
+===================================================== */
+
+.settings-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.settings-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+
+    min-width: 180px;
+    padding: 8px;
+
+    background: rgba(7, 19, 26, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+    z-index: 1000;
+}
+
+.settings-panel.open {
+    display: flex;
+}
+
+.settings-item {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.settings-item:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 
@@ -370,17 +476,7 @@ body {
     border-radius: 4px;
 }
 
-.nav-button.active {
-    background: var(--wire-hover-surface);
-    border-color: var(--wire-accent);
-    border-width: 2px;
 
-    box-shadow:
-        inset 1px 1px 0 rgba(255, 255, 255, 0.15),
-        inset -1px -1px 0 rgba(0, 0, 0, 0.30);
-
-    text-shadow: 0 0 8px var(--wire-accent-glow-soft);
-}
 
 .menu-panel {
     display: none;
@@ -411,9 +507,7 @@ body {
     color: var(--wire-text-muted);
     text-decoration: none;
 
-    font-family: "Rajdhani", sans-serif;
     font-size: 12px;
-    font-weight: 600;
     letter-spacing: 0.8px;
 
     white-space: nowrap;

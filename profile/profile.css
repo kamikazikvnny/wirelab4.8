@@ -159,7 +159,7 @@
 
     font-family: inherit;
     font-size: 9px;
-    font-weight: 300;
+    : 300;
     transform: translateY(-6px);
 
     cursor: pointer;
@@ -198,7 +198,7 @@
 
     font-family: "Reddit Sans", sans-serif;
     font-size: 20px;
-    font-weight: 10;
+    : 10;
     line-height: 1;
 
     text-shadow:
@@ -285,7 +285,7 @@
     color: var(--wire-accent);
 
     font-size: 13px;
-    font-weight: 700;
+    : 700;
 
     letter-spacing: 0.5px;
 }
@@ -295,7 +295,7 @@
     color: var(--wire-accent);
 
     font-size: 12px;
-    font-weight: 700;
+    : 700;
 }
 
 
@@ -498,7 +498,7 @@
 
     font-family: inherit;
     font-size: 9px;
-    font-weight: 600;
+    : 600;
 
     cursor: pointer;
 
@@ -721,7 +721,7 @@
     color: var(--wire-text-muted);
 
     font-size: 9px;
-    font-weight: 600;
+    : 600;
 }
 
 
@@ -779,7 +779,7 @@
 
     font-family: inherit;
     font-size: 9px;
-    font-weight: 600;
+    : 600;
 
     cursor: pointer;
 

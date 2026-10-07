@@ -16,7 +16,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 24px;
-    font-weight: 700;
+    : 700;
     line-height: 1.2;
     letter-spacing: 1.5px;
 
@@ -146,7 +146,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    : 700;
     line-height: 1.15;
 
     letter-spacing: 0.6px;
@@ -167,7 +167,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 10px;
-    font-weight: 600;
+    : 600;
     line-height: 1.2;
 
     letter-spacing: 0.8px;
@@ -187,7 +187,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 9px;
-    font-weight: 700;
+    : 700;
     letter-spacing: 0.9px;
 
     color: var(--wire-accent-bright);

@@ -1,0 +1,240 @@
+/* =====================================================
+   WIRELAB — SETTINGS PAGE
+===================================================== */
+
+
+/* =====================================================
+   SETTINGS CONTENT
+===================================================== */
+
+.settings-content {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   SETTINGS CARD
+===================================================== */
+
+.settings-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid var(--wire-border);
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* =====================================================
+   SETTINGS TITLE
+===================================================== */
+
+.settings-card h1 {
+    margin: 0;
+
+    color: var(--wire-text);
+
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   SETTINGS DESCRIPTION
+===================================================== */
+
+.settings-description {
+    margin: 6px 0 20px;
+
+    color: var(--wire-text-muted);
+
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+/* =====================================================
+   SETTINGS SECTION
+===================================================== */
+
+.settings-section {
+    margin-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.settings-section h2 {
+    margin: 14px 0 8px;
+
+    color: var(--wire-text);
+
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+
+/* =====================================================
+   SETTINGS ROW
+===================================================== */
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    min-height: 54px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =====================================================
+   SETTINGS ROW TEXT
+===================================================== */
+
+.settings-row-text {
+    min-width: 0;
+    flex: 1;
+}
+
+.settings-row-text h3 {
+    margin: 0 0 3px;
+
+    color: var(--wire-text);
+
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.settings-row-text p {
+    margin: 0;
+
+    color: var(--wire-text-muted);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   SETTINGS CONTROL
+===================================================== */
+
+.settings-control {
+    flex: 0 0 auto;
+
+    min-width: 58px;
+    height: 28px;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--wire-border);
+    border-radius: 4px;
+
+    background: transparent;
+
+    color: var(--wire-text);
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+}
+
+.settings-control:hover {
+    background: var(--wire-hover-surface);
+    border-color: var(--wire-accent);
+}
+
+
+/* =====================================================
+   SETTINGS VERSION
+===================================================== */
+
+.settings-version {
+    flex: 0 0 auto;
+
+    color: var(--wire-text-muted);
+
+    font-size: 11px;
+    letter-spacing: 0.8px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .settings-content {
+        width: calc(100% - 8px);
+        padding-top: 8px;
+    }
+
+    .settings-card {
+        padding: 16px;
+    }
+
+    .settings-card h1 {
+        font-size: 20px;
+    }
+
+    .settings-row {
+        gap: 10px;
+    }
+
+    .settings-row-text p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .settings-card {
+        padding: 14px;
+    }
+
+    .settings-row-text h3 {
+        font-size: 13px;
+    }
+
+    .settings-row-text p {
+        font-size: 10px;
+    }
+
+    .settings-control {
+        min-width: 52px;
+    }
+
+}

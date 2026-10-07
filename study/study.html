@@ -12,26 +12,24 @@
 <header class="site-header">
     <div class="navbar">
         <div class="menu-container">
+            <button
+                type="button"
+                class="nav-button menu-button"
+                id="menu-button"
+                aria-label="Open menu"
+                title="Menu">
+                ☰
+            </button>
 
-                <button
-                    type="button"
-                    class="nav-button menu-button"
-                    id="menu-button"
-                    aria-label="Open menu"
-                    title="Menu">
-                    ☰
-                </button>
-
-                <div class="menu-panel" id="menu-panel">
-                    <a href="profile/profile.html" class="menu-item">PROFILE</a>
-                    <a href="debug/debug.html" class="menu-item">DEBUG</a>
-                    <a href="tools/tools.html" class="menu-item">TOOLS</a>
-                    
-                </div>
+            <div class="menu-panel" id="menu-panel">
+                <a href="profile/profile.html" class="menu-item">Profile</a>
+                <a href="debug/debug.html" class="menu-item">Debug</a>
+                <a href="tools/tools.html" class="menu-item">Tools</a>
             </div>
+        </div>
 
         <div class="navbar-avatar">
-            <a href="indexs.html" class="avatar-frame" id="navbar-profile">
+            <a href="index.html" class="avatar-frame" id="navbar-profile">
                 <img src="z-images/profile-icons/icon-03.webp" alt="profile">
             </a>
         </div>
@@ -41,8 +39,25 @@
                 <a data-page="study" class="nav-button">STUDY</a>
                 <a data-page="labs" class="nav-button">LABS</a>
                 <a data-page="test" class="nav-button">TEST</a>
-            
         </nav>
+
+        <div class="settings-container">
+
+    <button
+        type="button"
+        class="settings-button"
+        id="settings-button"
+        aria-label="Settings"
+        title="Settings">
+        ⚙
+    </button>
+
+    <div class="settings-panel" id="settings-panel">
+        <a href="settings/settings.html" class="settings-item">Settings</a>
+        <a href="profile/profile.html" class="settings-item">Profile</a>
+    </div>
+
+</div>
 
         <button
             type="button"
@@ -55,7 +70,7 @@
 
 
 <!-- =========================================================
-     study CONTENT
+     STUDY CONTENT
 ========================================================= -->
 <main class="study-content page-width">
 
@@ -66,7 +81,7 @@
     >
 
     <!-- =====================================================
-         study INTRO
+         STUDY INTRO
     ====================================================== -->
     <div class="study-intro">
         <div class="study-intro-text">

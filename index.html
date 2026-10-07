@@ -7,28 +7,26 @@
 <link rel="stylesheet" href="nav.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 <header class="site-header">
     <div class="navbar">
         <div class="menu-container">
+            <button
+                type="button"
+                class="nav-button menu-button"
+                id="menu-button"
+                aria-label="Open menu"
+                title="Menu">
+                ☰
+            </button>
 
-                <button
-                    type="button"
-                    class="nav-button menu-button"
-                    id="menu-button"
-                    aria-label="Open menu"
-                    title="Menu">
-                    ☰
-                </button>
-
-                <div class="menu-panel" id="menu-panel">
-                    <a href="profile/profile.html" class="menu-item">PROFILE</a>
-                    <a href="debug/debug.html" class="menu-item">DEBUG</a>
-                    <a href="tools/tools.html" class="menu-item">TOOLS</a>
-                    
-                </div>
+            <div class="menu-panel" id="menu-panel">
+                <a href="profile/profile.html" class="menu-item">Profile</a>
+                <a href="debug/debug.html" class="menu-item">Debug</a>
+                <a href="tools/tools.html" class="menu-item">Tools</a>
             </div>
+        </div>
 
         <div class="navbar-avatar">
             <a href="index.html" class="avatar-frame" id="navbar-profile">
@@ -41,8 +39,25 @@
                 <a data-page="study" class="nav-button">STUDY</a>
                 <a data-page="labs" class="nav-button">LABS</a>
                 <a data-page="test" class="nav-button">TEST</a>
-            
         </nav>
+
+        <div class="settings-container">
+
+    <button
+        type="button"
+        class="settings-button"
+        id="settings-button"
+        aria-label="Settings"
+        title="Settings">
+        ⚙
+    </button>
+
+    <div class="settings-panel" id="settings-panel">
+        <a href="settings/settings.html" class="settings-item">Settings</a>
+        <a href="profile/profile.html" class="settings-item">Profile</a>
+    </div>
+
+</div>
 
         <button
             type="button"
@@ -61,10 +76,10 @@
         <div class="home-hero-content">
             <span class="hero-label"> VIRTUAL ELECTRICAL TRAINING </span>
             <h2> ENTER THE LAB. </h2>
-            <p> study electrical theory, build circuits,
+            <p> Study electrical theory, build circuits,
                 test your knowledge, and troubleshoot
                 real-world problems. </p>
-            <a href="study/study.html" class="hero-button" > START studyING </a>
+            <a href="study/study.html" class="hero-button" > START STUDYING </a>
         </div>
     </section>
 
@@ -76,7 +91,7 @@
             <span class="section-label">
                 THE WIRELAB SYSTEM
             </span>
-            <h2> study IT. BUILD IT. TEST IT. FIX IT. </h2>
+            <h2> STUDY IT. BUILD IT. TEST IT. FIX IT. </h2>
             <p> Follow the complete electrical studying
                 cycle from theory to troubleshooting. </p>
         </div>
@@ -86,11 +101,11 @@
             <!-- study -->
             <a href="study/study.html" class="home-action-card">
                 <span class="action-number"> 01 </span>
-                <span class="action-label"> study IT </span>
-                <h3> study </h3>
+                <span class="action-label"> STUDY IT </span>
+                <h3> STUDY </h3>
                 <p>Build your electrical knowledge through
                     structured lessons and key concepts. </p>
-                <span class="action-link"> ENTER study → </span>
+                <span class="action-link"> ENTER STUDY → </span>
             </a>
 
             <!-- LABS -->
@@ -135,12 +150,12 @@
             <span class="section-label">
                 YOUR PROGRESS
             </span>
-            <h2> CONTINUE studyING </h2>
+            <h2> CONTINUE STUDYING </h2>
         </div>
         <div class="progress-card">
             <div class="progress-card-main">
                 <span class="progress-label">
-                    study PROGRESS
+                    STUDY PROGRESS
                 </span>
                 <h3> Electrical Theory </h3>
                 <p>
@@ -216,7 +231,7 @@
         <div class="lab-bench-content">
             <span class="section-label"> WIRELAB </span>
             <h2> THE LAB IS OPEN. </h2>
-            <p> study the theory. Build the circuit.
+            <p> Study the theory. Build the circuit.
                 Test your knowledge. Find the fault.
             </p>
             <a href="labs/labs.html" class="hero-button" >
