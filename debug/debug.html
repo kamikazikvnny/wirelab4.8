@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>wire-lab — Virtual Electrical Training</title>
+<title>Wirelab</title>
 <link rel="stylesheet" href="../nav.css">
-<link rel="stylesheet" href="debug.css">
+<link rel="icon" type="image/webp" href="z-images/profile-icons/icon-03.webp">
 </head>
-<body>
 
+<body>
+</head>
+
+<body>
 <header class="site-header">
     <div class="navbar">
-        <div class="menu-container">
+        <div class="nav-menu-container">
             <button
                 type="button"
-                class="nav-button menu-button"
-                id="menu-button"
-                aria-label="Open menu"
-                title="Menu">
+                class="nav-button nav-menu-button"
+                id="nav-menu-button"
+                aria-label="Open Nav Menu"
+                title="Nav Menu">
                 ☰
             </button>
 
-            <div class="menu-panel" id="menu-panel">
-                <a href="profile/profile.html" class="menu-item">Profile</a>
-                <a href="debug/debug.html" class="menu-item">Debug</a>
-                <a href="tools/tools.html" class="menu-item">Tools</a>
+            <div class="nav-menu-panel" id="nav-menu-panel">
+                <a href="debug/debug.html" class="nav-menu-item">Debug</a>
+                <a href="tools/tools.html" class="nav-menu-item">Tools</a>
             </div>
         </div>
 
-        <div class="navbar-avatar">
-            <a href="index.html" class="avatar-frame" id="navbar-profile">
-                <img src="z-images/profile-icons/icon-03.webp" alt="profile">
+        <div class="navbar-profile-avatar">
+            <a href="index.html" class="nav-pro-avatar-frame" id="navbar-profile">
+                <img src="z-images/profile-icons/icon-03.webp" alt="Profile">
             </a>
         </div>
         <div class="wirelab-stencil-logo">
             <a href="index.html" class="stencil-logo" id="wirelab-stencil-logo">
-                <img src="../z-images/wirelab-stencil-logo.webp" alt="profile">
+                <img src="z-images/wirelab-stencil-logo.webp" alt="WireLab">
             </a>
         </div>
 
@@ -48,7 +50,7 @@
                 <a data-page="test" class="nav-button">TEST</a>
         </nav>
 
-        <div class="settings-container">
+        <div class="settings-button-container">
 
         <button
             type="button"
@@ -59,17 +61,17 @@
         ⚙
         </button>
 
-        <div class="settings-panel" id="settings-panel">
-            <a href="settings/settings.html" class="settings-item">Settings</a>
-            <a href="profile/profile.html" class="settings-item">Profile</a>
+        <div class="settings-button-panel" id="settings-button-panel">
+            <a href="settings/settings.html" class="settings-button-item">Settings</a>
+            <a href="profile/profile.html" class="settings-button-item">Profile</a>
         </div>
 
 </div>
 
         <button
             type="button"
-            class="theme-toggle"
-            id="theme-toggle"
+            class="theme-toggle-button"
+            id="theme-toggle-button"
             aria-label="Switch to light theme"
             title="Switch theme"> 💡 </button>
     </div> <!-- navbar -->

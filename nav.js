@@ -91,18 +91,89 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   NAV MENU
+===================================================== */
+
+const navMenuButton =
+    document.getElementById("nav-menu-button");
+
+const navMenuPanel =
+    document.getElementById("nav-menu-panel");
+
+if (navMenuButton && navMenuPanel) {
+
+    /* =================================================
+       NAV MENU LINKS
+    ================================================= */
+
     const menuPages = {
         PROFILE: "profile/profile.html",
         DEBUG: "debug/debug.html",
         TOOLS: "tools/tools.html"
     };
 
-    document.querySelectorAll(".menu-item").forEach(function (link) {
-        const label = (link.textContent || "").trim().toUpperCase();
+    document.querySelectorAll(".nav-menu-item").forEach(function (link) {
+
+        const label =
+            (link.textContent || "").trim().toUpperCase();
+
         if (menuPages[label]) {
             link.href = prefix + menuPages[label];
         }
+
     });
+
+
+    /* =================================================
+       OPEN / CLOSE MENU
+    ================================================= */
+
+    navMenuButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        navMenuPanel.classList.toggle("open");
+
+    });
+
+
+    /* =================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ================================================= */
+
+    document.addEventListener("click", function () {
+
+        navMenuPanel.classList.remove("open");
+
+    });
+
+
+    navMenuPanel.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+    });
+
+}
+
+
+
+
+
+
+
+
+
 
 
     const brandImage = document.querySelector(".brand-icon img");
@@ -111,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
         brandImage.src = prefix + "z-images/wirelab-logo2.png";
     }
 
-    const settingsIcon = document.querySelector("#settings-icon");
+    const settingsIcon = document.querySelector("#settings-button-icon");
 
 if (settingsIcon) {
     settingsIcon.src = prefix + "z-images/settings-icon.webp";
@@ -176,34 +247,6 @@ if (settingsIcon) {
 
 
 
-    const menuButton =
-    document.getElementById("menu-button");
-
-const menuPanel =
-    document.getElementById("menu-panel");
-
-if (menuButton && menuPanel) {
-
-    menuButton.addEventListener("click", function (event) {
-
-        event.stopPropagation();
-
-        menuPanel.classList.toggle("open");
-
-    });
-
-    document.addEventListener("click", function () {
-
-        menuPanel.classList.remove("open");
-
-    });
-
-    menuPanel.addEventListener("click", function (event) {
-
-        event.stopPropagation();
-
-    });
-}
 
 
 /* =====================================================
@@ -213,10 +256,10 @@ if (menuButton && menuPanel) {
 const settingsButton =
     document.getElementById("settings-button");
 
-const settingsPanel =
-    document.getElementById("settings-panel");
+const settingsButtonPanel =
+    document.getElementById("settings-button-panel");
 
-if (settingsButton && settingsPanel) {
+if (settingsButton && settingsButtonPanel) {
 
     /* =================================================
        SETTINGS LINKS
@@ -227,7 +270,7 @@ if (settingsButton && settingsPanel) {
         PROFILE: "profile/profile.html"
     };
 
-    document.querySelectorAll(".settings-item").forEach(function (link) {
+    document.querySelectorAll(".settings-button-item").forEach(function (link) {
 
         const label =
             (link.textContent || "").trim().toUpperCase();
@@ -247,7 +290,7 @@ if (settingsButton && settingsPanel) {
 
         event.stopPropagation();
 
-        settingsPanel.classList.toggle("open");
+        settingsButtonPanel.classList.toggle("open");
 
     });
 
@@ -258,12 +301,12 @@ if (settingsButton && settingsPanel) {
 
     document.addEventListener("click", function () {
 
-        settingsPanel.classList.remove("open");
+        settingsButtonPanel.classList.remove("open");
 
     });
 
 
-    settingsPanel.addEventListener("click", function (event) {
+    settingsButtonPanel.addEventListener("click", function (event) {
 
         event.stopPropagation();
 
@@ -282,12 +325,12 @@ if (settingsButton && settingsPanel) {
 
 
 
-        /* =====================================================
-       THEME TOGGLE
+    /* =====================================================
+    THEME TOGGLE
     ===================================================== */
 
     const themeToggle =
-        document.getElementById("theme-toggle");
+        document.getElementById("theme-toggle-button");
 
     if (themeToggle) {
 
@@ -311,7 +354,7 @@ if (settingsButton && settingsPanel) {
 
             } else {
 
-                themeToggle.textContent = "💡";
+                themeToggle.textContent = "☾";
 
                 themeToggle.setAttribute(
                     "aria-label",
@@ -374,3 +417,45 @@ if (settingsButton && settingsPanel) {
 
 });
 
+
+/* =====================================================
+   WIRELAB — STENCIL LOGO SHOWN ON ALL PAGES
+===================================================== */
+
+const stencilLogo = document.getElementById("wirelab-stencil-logo");
+
+if (stencilLogo) {
+
+    const path = window.location.pathname;
+
+    let prefix = "";
+
+    if (
+    path.includes("/study/units/") ||
+    path.includes("/tools/color-wheel/")
+) {
+    prefix = "../../";
+}
+
+else if (
+    path.includes("/study/") ||
+        path.includes("/tools/") ||
+        path.includes("/labs/") ||
+        path.includes("/test/") ||
+        path.includes("/profile/") ||
+        path.includes("/settings/") ||
+        path.includes("/debug/")
+    ) {
+        prefix = "../";
+    }
+
+    stencilLogo.href = `${prefix}index.html`;
+
+    const logoImage = stencilLogo.querySelector("img");
+
+    if (logoImage) {
+        logoImage.src =
+            `${prefix}z-images/wirelab-stencil-logo.webp`;
+    }
+
+}

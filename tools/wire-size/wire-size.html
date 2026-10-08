@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wirelab</title>
+<link rel="stylesheet" href="../../nav.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/webp" href="z-images/profile-icons/icon-03.webp">
+</head>
+
+<body>
+</head>
+
+<body>
+<header class="site-header">
+    <div class="navbar">
+        <div class="nav-menu-container">
+            <button
+                type="button"
+                class="nav-button nav-menu-button"
+                id="nav-menu-button"
+                aria-label="Open Nav Menu"
+                title="Nav Menu">
+                ☰
+            </button>
+
+            <div class="nav-menu-panel" id="nav-menu-panel">
+                <a href="debug/debug.html" class="nav-menu-item">Debug</a>
+                <a href="tools/tools.html" class="nav-menu-item">Tools</a>
+            </div>
+        </div>
+
+        <div class="navbar-profile-avatar">
+            <a href="index.html" class="nav-pro-avatar-frame" id="navbar-profile">
+                <img src="z-images/profile-icons/icon-03.webp" alt="Profile">
+            </a>
+        </div>
+        <div class="wirelab-stencil-logo">
+            <a href="index.html" class="stencil-logo" id="wirelab-stencil-logo">
+                <img src="z-images/wirelab-stencil-logo.webp" alt="WireLab">
+            </a>
+        </div>
+
+        
+
+        <nav class="site-navigation">
+                <a data-page="home" class="nav-button">HOME</a>
+                <a data-page="study" class="nav-button">STUDY</a>
+                <a data-page="labs" class="nav-button">LABS</a>
+                <a data-page="test" class="nav-button">TEST</a>
+        </nav>
+
+        <div class="settings-button-container">
+
+        <button
+            type="button"
+            class="settings-button"
+            id="settings-button"
+            aria-label="Settings"
+            title="Settings">
+        ⚙
+        </button>
+
+        <div class="settings-button-panel" id="settings-button-panel">
+            <a href="settings/settings.html" class="settings-button-item">Settings</a>
+            <a href="profile/profile.html" class="settings-button-item">Profile</a>
+        </div>
+
+</div>
+
+        <button
+            type="button"
+            class="theme-toggle-button"
+            id="theme-toggle-button"
+            aria-label="Switch to light theme"
+            title="Switch theme"> 💡 </button>
+    </div> <!-- navbar -->
+
+</header>
+
+    <!-- =====================================================
+         WIRELAB NAVIGATION
+    ====================================================== -->
+
+    <div id="navbar"></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="page-width">
+
+        <section class="wire-size-page">
+
+            <header class="tool-header">
+
+                <h1>Wire Size Calculator</h1>
+
+                <p>
+                    Calculate the recommended conductor size
+                    based on load current, voltage, and distance.
+                </p>
+
+            </header>
+
+
+            <!-- =================================================
+                 CALCULATOR
+            ================================================== -->
+
+            <section class="calculator-card">
+
+                <div class="input-group">
+
+                    <label for="amperage">
+                        Amperage
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amperage"
+                        min="0"
+                        step="0.1"
+                        placeholder="Example: 20"
+                    >
+
+                    <span class="input-unit">
+                        A
+                    </span>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="voltage">
+                        Voltage
+                    </label>
+
+                    <select id="voltage">
+
+                        <option value="120">
+                            120 V
+                        </option>
+
+                        <option value="208">
+                            208 V
+                        </option>
+
+                        <option value="240">
+                            240 V
+                        </option>
+
+                        <option value="277">
+                            277 V
+                        </option>
+
+                        <option value="480">
+                            480 V
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="distance">
+                        One-Way Distance
+                    </label>
+
+                    <input
+                        type="number"
+                        id="distance"
+                        min="0"
+                        step="1"
+                        placeholder="Example: 100"
+                    >
+
+                    <span class="input-unit">
+                        ft
+                    </span>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="material">
+                        Conductor Material
+                    </label>
+
+                    <select id="material">
+
+                        <option value="copper">
+                            Copper
+                        </option>
+
+                        <option value="aluminum">
+                            Aluminum
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="insulation">
+                        Insulation Rating
+                    </label>
+
+                    <select id="insulation">
+
+                        <option value="60">
+                            60°C
+                        </option>
+
+                        <option value="75" selected>
+                            75°C
+                        </option>
+
+                        <option value="90">
+                            90°C
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="calculate-button"
+                >
+                    Calculate
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 RESULT
+            ================================================== -->
+
+            <section
+                class="result-card"
+                id="result-card"
+                hidden
+            >
+
+                <div class="result-label">
+                    Recommended Wire Size
+                </div>
+
+                <div
+                    class="result-size"
+                    id="result-size"
+                >
+                    —
+                </div>
+
+                <div
+                    class="result-details"
+                    id="result-details"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MESSAGE
+            ================================================== -->
+
+            <div
+                class="calculator-message"
+                id="calculator-message"
+                aria-live="polite"
+            >
+            </div>
+
+
+            <!-- =================================================
+                 DISCLAIMER
+            ================================================== -->
+
+            <section class="tool-note">
+
+                <h2>Note</h2>
+
+                <p>
+                    This calculator is intended as a learning
+                    tool. Final conductor sizing should be
+                    verified using the applicable NEC requirements,
+                    ampacity tables, correction factors, and
+                    installation conditions.
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="../nav.js"></script>
+
+    <script src="wire-size.js"></script>
+
+</body>
+
+</html>

@@ -18,12 +18,33 @@ h3 {
 body {
     font-size: 14px;
     font-weight: 300;}
-
 /* =====================================================
    WIRELAB — DARK THEME
 ===================================================== */
 :root {
     --wire-bg: #0F1113;
+
+    --wire-text: #D7DADC;
+    --wire-text-muted: #8B9197;
+    --wire-text-bright: #F1F3F5;
+
+    --wire-border: #2A2D31;
+    --wire-border-accent: #4A4F55;
+
+    --wire-hover-surface: #c329ae6a;
+    --wire-active: #30343A;
+
+    --wire-accent: #7995b9;
+
+    --wire-shadow: rgba(0, 0, 0, 0.35);
+    --wire-popup-window-bg: rgba(255, 255, 255, 0.25);
+    
+}
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+[data-theme="light"] {
+    --wire-bg: #424b55;
 
     --wire-text: #D7DADC;
     --wire-text-muted: #8B9197;
@@ -39,51 +60,77 @@ body {
 
     --wire-shadow: rgba(0, 0, 0, 0.35);
 }
-
-/* =====================================================
-   LIGHT THEME
-===================================================== */
-[data-theme="light"] {
-    --wire-bg: #989384f4;
-
-    --wire-surface: #FFFFFF;
-    --wire-hover-surface: rgb(190, 185, 169);
-    --wire-nav-surface: rgba(205, 201, 187, 0.745); /* navbar color */
-
-    --wire-text: #ffffff;
-    --wire-text-muted: #2f2c1b;
-
-    --wire-accent: #5e4d2e; /* top of navbar highlight */
-    --wire-accent-bright: #80643bd7; /* active tab text color & navbar top */
-    --wire-accent-glow: rgba(96, 15, 15, 0.976); /* avatar glow */
-    --wire-accent-glow-soft: rgba(217, 146, 36, 0.16);
-    --wire-accent-glow-subtle: rgba(184, 117, 22, 0.10);
-
-    --wire-border: rgba(184, 117, 22, 0.30);
-
-    --wire-shadow: rgba(0, 0, 0, 0.16);
-    --wire-highlight: rgba(255, 255, 255, 0.55);
-}
-
-
-/* =====================================================
-   TEST — ANSWER COLORS
-===================================================== */
-
-/* CORRECT ANSWER */
+/* -- TEST ANSWER COLORS -- */
 .answer-choice.correct {
     border-color: rgba(80, 220, 120, 0.85);
     box-shadow: 0 0 8px rgba(80, 220, 120, 0.20);
 }
-
-
-/* INCORRECT ANSWER */
 .answer-choice.incorrect {
     border-color: rgba(230, 70, 70, 0.55);
     box-shadow: 0 0 8px rgba(230, 70, 70, 0.12);
 }
 
 
+/* =====================================================
+   WIRELAB — GLOBAL NAVIGATION
+===================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   GLOBAL BODY
+===================================================== */
+body {
+    margin: 0;
+    padding-top: 50px;
+    overflow-y: scroll; /* this fixed the shifting pages */
+    background-color: var(--wire-bg);
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--wire-text);
+}
+
+
+/* =====================================================
+   GLOBAL CONTENT CONTAINERS - consistent outer boundary?
+===================================================== */
+main,
+.page-width {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+  SITE HEADER & OUTER GLOW
+===================================================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0px 0;
+    z-index: 9999;
+    background: transparent;
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+}
 
 
 /* =====================================================
@@ -114,28 +161,136 @@ body {
 
 
 /* =====================================================
-   NAVBAR AVATAR & FRAME
+   NAV MENU BUTTON
 ===================================================== */
-.avatar-frame {
-    width: 29px;
-    height: 29px;
-    transform: translateX(-1px);
-    transform: translateY(2px);
-    margin-left: 12px;
+
+.nav-menu-button {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 4px;
+
+    color: var(--wire-text-muted);
+
+    font-size: 16px;
+    line-height: 0;
+
+    cursor: pointer;
+
+    transform: translateX(-4px);
+}
+
+.nav-menu-button:hover {
+    background: var(--wire-hover-surface);
+}
+
+
+/* =====================================================
+   NAV MENU CONTAINER
+===================================================== */
+
+.nav-menu-container {
+    position: relative;
 
     display: flex;
     align-items: center;
-    justify-content: center;
-
-
 }
-.avatar-frame:hover {
+
+
+/* =====================================================
+   NAV MENU PANEL
+===================================================== */
+
+.nav-menu-panel {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+
+    min-width: 180px;
+    padding: 8px;
+
+    background: var(--wire-popup-window-bg);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+    z-index: 1000;
+}
+
+.nav-menu-panel.open {
+    display: flex;
+}
+
+
+/* =====================================================
+   NAV MENU ITEMS
+===================================================== */
+
+.nav-menu-item {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 300;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    white-space: nowrap;
+}
+
+.nav-menu-item:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   NAVBAR PROFILE AVATAR
+===================================================== */
+.nav-pro-avatar-frame {
+    width: 29px;
+    height: 29px;
+    transform: translate(-1px, 2px);
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-pro-avatar-frame:hover {
     background: var(--wire-hover);
     border-color: var(--wire-accent);
     border-radius: 4px;
 }
-
-
 
 .wirelab-stencil-logo img {
     width: 62px;
@@ -207,109 +362,8 @@ body {
 ===================================================== */
 .nav-button.active {
     color: var(--wire-text-bright);
-
     background: var(--wire-active);
-
     border-color: var(--wire-accent);
-}
-
-
-
-/* =====================================================
-   WIRELAB — GLOBAL NAVIGATION
-===================================================== */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-/* =====================================================
-   GLOBAL CONTENT CONTAINERS - consistent outer boundary?
-===================================================== */
-main,
-.page-width {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: border-box;
-}
-
-
-/* =====================================================
-   GLOBAL BODY
-===================================================== */
-body {
-    margin: 0;
-    padding-top: 50px;
-    overflow-y: scroll; /* this fixed the shifting pages */
-    background-color: var(--wire-bg);
-    background-image: none;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--wire-text);
-}
-
-
-/* =====================================================
-  SITE HEADER & OUTER GLOW
-===================================================== */
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-
-    padding: 0px 0;
-    z-index: 9999;
-    background: transparent;
-    pointer-events: none;
-
-    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
-}
-
-
-
-
-
-/* =====================================================
-   BRAND Lightning ICON
-===================================================== */
-
-.brand-icon img {
-    width: 20px;
-    height: 60px;
-    opacity: 0.9;
-    object-fit: contain;
-    transform: translateX(-8px);
-}
-
-/* =====================================================
-   WIRELAB WORDMARK
-===================================================== */
-
-.brand h1 {
-    margin: 0;
-    font-size: 17px;
-    letter-spacing: 1.5px;
-    color: var(--wire-text);
-    white-space: nowrap;
-    text-shadow:
-        0 1px 12px var(--wire-text-glow);
-}
-
-.brand h1::first-letter {
-    color: var(--wire-text);
 }
 
 /* =====================================================
@@ -319,17 +373,13 @@ body {
     display: flex;
     align-items: stretch;
     justify-content: center;
-
     flex: 1 1 auto;
     min-width: 0;
-
     gap: 0px;
     margin-left: auto; /* keeps logo + bulb locked and links centered */
     margin-right: auto; /* keeps logo + bulb locked and links centered */
-
     overflow: visible;
 }
-
 
 
 /* =====================================================
@@ -344,95 +394,73 @@ body {
 
 
 
-.settings-button {
-    width: 20px;
-    height: 20px;
-
-    margin-left: 2px;
-    margin-right: 5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0;
-
-    border: 1px solid transparent;
-    border-radius: 4px;
-
-    background: transparent;
-
-    color: var(--wire-text-muted);
-
-    font-size: 15px;
-    line-height: 1;
-
-    cursor: pointer;
-}
-
-.settings-button:hover {
-    color: var(--wire-text);
-    background: var(--wire-hover-surface);
-    border-color: var(--wire-accent);
-}
-
-
-
 
 
 
 /* =====================================================
-   WIRELAB — SETTINGS MENU
+SETTINGS BUTTON
 ===================================================== */
+.settings-button {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--wire-text-muted);
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+}
 
-.settings-container {
+.settings-button:hover {
+     background-color: var(--wire-hover-surface);
+}
+
+
+/* - - SETTINGS MENU - - */
+.settings-button-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.settings-panel {
+.settings-button-panel {
     position: absolute;
     top: calc(100% + 8px);
     right: 0;
-
     display: none;
     flex-direction: column;
-
     min-width: 180px;
     padding: 8px;
-
-    background: rgba(7, 19, 26, 0.94);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
+    background: var(--wire-popup-window-bg);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 8px;
-
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-
     z-index: 1000;
 }
 
-.settings-panel.open {
+.settings-button-panel.open {
     display: flex;
 }
 
-.settings-item {
+.settings-button-item {
     display: block;
-
     padding: 10px 12px;
-
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;
-
     border: 1px solid transparent;
     border-radius: 5px;
 }
 
-.settings-item:hover {
+.settings-button-item:hover {
     border-color: rgba(255, 255, 255, 0.8);
     background: rgba(255, 255, 255, 0.05);
 }
@@ -441,101 +469,31 @@ body {
 /* =====================================================
    THEME TOGGLE
 ===================================================== */
-.theme-toggle {
+.theme-toggle-button {
     width: 20px;
     height: 20px;
-
     margin-left: 5px;
     margin-right: 1px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
-
-    border: 1px solid var(--wire-border);
-
     background: transparent;
-
     color: var(--wire-accent-bright);
-
     font-size: 15px;
     line-height: 1;
-
     cursor: pointer;
-
-    border-radius: 5px;
-
-}
-
-.theme-toggle:hover {
-    background: var(--wire-hover-surface);
-
-    color: var(--wire-text);
-}
-
-
-.menu-button {
-    min-width: 20px;
-    width: 20px;
-    height: 20px;
-    padding: 0;
     border: none;
-    background: transparent;
-    font-size: 16px;
-    line-height: 0;
-    cursor: pointer;
-    transform: translateX(-4px);
+    border-radius: 5px;
 }
 
-.menu-button:hover {
+.theme-toggle-button:hover {
     background: var(--wire-hover-surface);
-    border-radius: 4px;
+   
 }
 
 
 
-.menu-panel {
-    display: none;
-    position: absolute;
-    top: 34px;
-    left: 0;
-    min-width: 100px;
-    padding: 6px;
-    border: 1px solid var(--wire-border);
-    background: var(--wire-nav-surface);
-
-}
-
-.menu-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.menu-panel.open {
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-item {
-    padding: 6px 6px;
-
-    color: var(--wire-text-muted);
-    text-decoration: none;
-
-    font-size: 12px;
-    letter-spacing: 0.8px;
-
-    white-space: nowrap;
-}
-
-.menu-item:hover {
-    color: var(--wire-text);
-    background: var(--wire-hover-surface);
-    border-radius: 4px;
-}
 
 
 

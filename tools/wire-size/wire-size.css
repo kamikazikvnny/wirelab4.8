@@ -1,0 +1,304 @@
+/* =====================================================
+   WIRELAB — WIRE SIZE CALCULATOR
+===================================================== */
+
+.wire-size-page {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 32px 0 60px;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.tool-header {
+
+    margin-bottom: 24px;
+
+}
+
+.tool-header h1 {
+
+    margin: 0 0 8px;
+
+}
+
+.tool-header p {
+
+    margin: 0;
+
+    color: var(--wire-text-muted);
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   CALCULATOR CARD
+===================================================== */
+
+.calculator-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    background: var(--wire-panel, var(--wire-bg));
+
+    border: 1px solid var(--wire-border);
+
+}
+
+
+/* =====================================================
+   INPUT GROUP
+===================================================== */
+
+.input-group {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+.input-group label {
+
+    font-size: 13px;
+
+    color: var(--wire-text-muted);
+
+}
+
+.input-group input,
+.input-group select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    background: var(--wire-bg);
+
+    color: var(--wire-text-bright);
+
+    border: 1px solid var(--wire-border);
+
+    border-radius: 3px;
+
+    outline: none;
+
+    font: inherit;
+
+}
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: var(--wire-accent);
+
+}
+
+
+/* =====================================================
+   INPUT UNIT
+===================================================== */
+
+.input-unit {
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 11px;
+
+    color: var(--wire-text-muted);
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+#calculate-button {
+
+    margin-top: 6px;
+
+    padding: 12px 16px;
+
+    background: var(--wire-accent);
+
+    color: var(--wire-bg);
+
+    border: 1px solid var(--wire-accent);
+
+    border-radius: 3px;
+
+    font: inherit;
+
+    cursor: pointer;
+
+}
+
+#calculate-button:hover {
+
+    background: var(--wire-hover);
+
+    color: var(--wire-text-bright);
+
+}
+
+#calculate-button:active {
+
+    transform: translateY(1px);
+
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.result-card {
+
+    margin-top: 18px;
+
+    padding: 24px;
+
+    text-align: center;
+
+    border: 1px solid var(--wire-border);
+
+    background: var(--wire-panel, var(--wire-bg));
+
+}
+
+.result-label {
+
+    margin-bottom: 8px;
+
+    color: var(--wire-text-muted);
+
+    font-size: 13px;
+
+}
+
+.result-size {
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    color: var(--wire-text-bright);
+
+}
+
+.result-details {
+
+    margin-top: 10px;
+
+    color: var(--wire-text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.calculator-message {
+
+    min-height: 20px;
+
+    margin-top: 12px;
+
+    color: var(--wire-text-muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.tool-note {
+
+    margin-top: 28px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--wire-border);
+
+}
+
+.tool-note h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 16px;
+
+}
+
+.tool-note p {
+
+    margin: 0;
+
+    color: var(--wire-text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .wire-size-page {
+
+        padding: 24px 0 40px;
+
+    }
+
+    .calculator-card {
+
+        padding: 16px;
+
+    }
+
+    .result-card {
+
+        padding: 20px;
+
+    }
+
+}
