@@ -144,6 +144,14 @@ body {
     margin-left: 7px;
 }
 
+@media (max-width: 768px) {
+    .wirelab-stencil-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+}
+
 
 /* =====================================================
    NAV BUTTONS
@@ -305,7 +313,7 @@ body {
 }
 
 /* =====================================================
-   NAVIGATION
+   NAVIGATION NAVBAR
 ===================================================== */
 .site-navigation {
     display: flex;
@@ -315,7 +323,7 @@ body {
     flex: 1 1 auto;
     min-width: 0;
 
-    gap: 12px;
+    gap: 0px;
     margin-left: auto; /* keeps logo + bulb locked and links centered */
     margin-right: auto; /* keeps logo + bulb locked and links centered */
 
