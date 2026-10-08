@@ -12,37 +12,43 @@
 <header class="site-header">
     <div class="navbar">
         <div class="menu-container">
+            <button
+                type="button"
+                class="nav-button menu-button"
+                id="menu-button"
+                aria-label="Open menu"
+                title="Menu">
+                ☰
+            </button>
 
-                <button
-                    type="button"
-                    class="nav-button menu-button"
-                    id="menu-button"
-                    aria-label="Open menu"
-                    title="Menu">
-                    ☰
-                </button>
-
-                <div class="menu-panel" id="menu-panel">
-                    <a href="profile/profile.html" class="menu-item">PROFILE</a>
-                    <a href="debug/debug.html" class="menu-item">DEBUG</a>
-                    <a href="tools/tools.html" class="menu-item">TOOLS</a>
-                    
-                </div>
+            <div class="menu-panel" id="menu-panel">
+                <a href="profile/profile.html" class="menu-item">Profile</a>
+                <a href="debug/debug.html" class="menu-item">Debug</a>
+                <a href="tools/tools.html" class="menu-item">Tools</a>
             </div>
+        </div>
 
         <div class="navbar-avatar">
             <a href="index.html" class="avatar-frame" id="navbar-profile">
                 <img src="z-images/profile-icons/icon-03.webp" alt="profile">
             </a>
         </div>
+        <div class="wirelab-stencil-logo">
+            <a href="index.html" class="stencil-logo" id="wirelab-stencil-logo">
+                <img src="../z-images/wirelab-stencil-logo.webp" alt="profile">
+            </a>
+        </div>
+
+        
 
         <nav class="site-navigation">
                 <a data-page="home" class="nav-button">HOME</a>
                 <a data-page="study" class="nav-button">STUDY</a>
                 <a data-page="labs" class="nav-button">LABS</a>
                 <a data-page="test" class="nav-button">TEST</a>
-            
         </nav>
+
+        <div class="settings-container">
 
         <button
             type="button"
@@ -50,8 +56,15 @@
             id="settings-button"
             aria-label="Settings"
             title="Settings">
-            ⚙
+        ⚙
         </button>
+
+        <div class="settings-panel" id="settings-panel">
+            <a href="settings/settings.html" class="settings-item">Settings</a>
+            <a href="profile/profile.html" class="settings-item">Profile</a>
+        </div>
+
+</div>
 
         <button
             type="button"
@@ -60,38 +73,29 @@
             aria-label="Switch to light theme"
             title="Switch theme"> 💡 </button>
     </div> <!-- navbar -->
+
 </header>
 
 <main class="debug-page">
-
     <section class="debug-hero">
-
         <div class="debug-icon">⚠</div>
-
         <h2>DEBUG</h2>
-
         <p>
             Find the fault. Trace the circuit. Fix the problem.
         </p>
-
     </section>
 
-
     <section class="debug-intro">
-
         <h2>Electrical Troubleshooting</h2>
-
         <p>
             Use your knowledge to identify electrical faults,
             test circuits, and determine what went wrong.
         </p>
-
     </section>
 
-
     <section class="debug-categories">
-
         <div class="debug-card">
+
             <span class="debug-card-icon">⚡</span>
             <h3>NO POWER</h3>
             <p>Find out why a circuit or device isn't receiving power.</p>
