@@ -121,6 +121,7 @@ body {
     height: 29px;
     transform: translateX(-1px);
     transform: translateY(2px);
+    margin-left: 12px;
 
     display: flex;
     align-items: center;
