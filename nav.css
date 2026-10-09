@@ -18,77 +18,87 @@ h3 {
 body {
     font-size: 14px;
     font-weight: 300;}
-/* =====================================================
-   WIRELAB — TYPOGRAPHY
-===================================================== */
-h1 {
-    font-size: 28px;
-    font-weight: 300;}
-h2 {
-    font-size: 22px;
-    font-weight: 300;}
-h3 {
-    font-size: 18px;
-    font-weight: 300;}
-body {
-    font-size: 14px;
-    font-weight: 300;}
-    
+
 /* =====================================================
    WIRELAB — DARK THEME
+   Graphite / Slate / Electric Teal
 ===================================================== */
 :root {
---wire-bg: rgb(15, 17, 19);
 
---wire-text: rgb(42, 44, 45);
---wire-text-muted: rgb(139, 145, 151);
---wire-text-bright: rgb(241, 243, 245);
+    /* BACKGROUNDS — lowest to highest depth */
+    --wire-bg: rgb(16, 19, 22);
+    --wire-surface: rgb(22, 27, 32);
+    --wire-card: rgb(28, 34, 40);
+    --wire-popup-window-bg: rgba(25, 31, 37, 0.98);
 
---wire-border: rgb(225, 119, 221);
---wire-border-accent: rgb(56, 247, 9);
+    /* TEXT */
+    --wire-text: rgb(205, 214, 220);
+    --wire-text-muted: rgb(139, 151, 160);
+    --wire-text-bright: rgb(229, 235, 239);
 
---wire-hover: rgb(37, 41, 46);
---wire-hover-surface: rgba(24, 69, 81, 0.648);
---wire-active: rgb(48, 52, 58);
+    /* BORDERS */
+    --wire-border: rgb(49, 59, 67);
+    --wire-border-accent: rgb(66, 199, 181);
 
---wire-accent: rgb(225, 119, 221);
---wire-shadow: rgb(255, 19, 19);
+    /* INTERACTIONS */
+    --wire-hover: rgb(37, 48, 54);
+    --wire-hover-surface: rgba(66, 199, 181, 0.09);
+    --wire-active: rgba(66, 199, 181, 0.15);
 
---wire-shadow: rgba(0, 0, 0, 0.35);
---wire-popup-window-bg: rgba(25, 27, 30, 0.97);
+    /* ACCENT */
+    --wire-accent: rgb(66, 199, 181);
+    --wire-accent-bright: rgb(111, 224, 207);
+
+    /* DEPTH */
+    --wire-shadow: rgba(0, 0, 0, 0.35);
+    --wire-shadow-deep: rgba(0, 0, 0, 0.55);
+
+    /* STATUS COLORS */
+    --wire-success: rgb(104, 190, 143);
+    --wire-warning: rgb(224, 178, 94);
+    --wire-danger: rgb(220, 105, 111);
 
 }
+
+
 /* =====================================================
-   LIGHT THEME
+   LIGHT THEME — WARM ALLOY
+   Stone / Bronze / Copper
 ===================================================== */
 [data-theme="light"] {
---wire-bg: rgb(187, 183, 172);
 
---wire-text: rgb(27, 31, 26);
---wire-text-muted: rgb(16, 14, 14);
---wire-text-bright: rgb(0, 0, 0);
+    /* BACKGROUNDS — layered depth */
+    --wire-bg: rgb(183, 177, 164);
+    --wire-surface: rgb(199, 191, 176);
+    --wire-card: rgb(216, 208, 193);
+    --wire-popup-window-bg: rgba(207, 198, 181, 0.98);
 
---wire-border: rgb(185, 167, 108);
---wire-border-accent: rgb(118, 161, 205);
+    /* TEXT */
+    --wire-text: rgb(48, 46, 41);
+    --wire-text-muted: rgb(91, 85, 75);
+    --wire-text-bright: rgb(31, 30, 27);
 
---wire-hover: rgb(227, 234, 226);
---wire-hover-surface: rgb(187, 183, 172);
---wire-active: rgb(187, 183, 172);
+    /* BORDERS */
+    --wire-border: rgb(151, 141, 123);
+    --wire-border-accent: rgb(146, 94, 57);
 
---wire-accent: rgb(201, 197, 186);
+    /* INTERACTIONS */
+    --wire-hover: rgb(207, 197, 179);
+    --wire-hover-surface: rgba(146, 94, 57, 0.09);
+    --wire-active: rgba(146, 94, 57, 0.15);
 
---wire-shadow: rgb(100, 102, 74);
---wire-popup-window-bg: rgba(159, 156, 150, 0.75);
-}
+    /* ACCENT */
+    --wire-accent: rgb(146, 94, 57);
+    --wire-accent-bright: rgb(117, 72, 43);
 
-/* -- TEST ANSWER COLORS -- */
-.answer-choice.correct {
-    border-color: rgba(80, 220, 120, 0.85);
-    box-shadow: 0 0 8px rgba(80, 220, 120, 0.20);
-}
-.answer-choice.incorrect {
-    border-color: rgba(230, 70, 70, 0.55);
-    box-shadow: 0 0 8px rgba(230, 70, 70, 0.12);
+    /* DEPTH */
+    --wire-shadow: rgba(43, 37, 28, 0.16);
+    --wire-shadow-deep: rgba(43, 37, 28, 0.28);
+
+    /* STATUS COLORS */
+    --wire-success: rgb(57, 111, 75);
+    --wire-warning: rgb(143, 94, 38);
+    --wire-danger: rgb(160, 64, 58);
 }
 
 
@@ -192,7 +202,7 @@ main,
 
     padding: 0;
 
-    border: none;
+    border: 1px solid var(--wire-border);
     border-radius: 4px;
 
     color: var(--wire-text-muted);
@@ -212,7 +222,7 @@ main,
 
 .nav-menu-container:hover {
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     box-shadow: none;
 }
 
@@ -248,7 +258,7 @@ main,
 
     background: var(--wire-popup-window-bg);
 
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--wire-border);
     border-radius: 8px;
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
@@ -274,7 +284,7 @@ main,
     text-decoration: none;
 
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
 
     border: 1px solid transparent;
     border-radius: 5px;
@@ -285,20 +295,8 @@ main,
 .nav-menu-item:hover {
     color: var(--wire-text-bright);
     border-color: var(--wire-border-accent);
-    background: var(--wire-hover);
+    background: var(--wire-hover-surface);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -317,7 +315,7 @@ main,
     justify-content: center;
 }
 .nav-pro-avatar-frame:hover {
-    background: var(--wire-hover);
+    background: var(--wire-hover-surface);
     border-color: var(--wire-accent);
     border-radius: 4px;
 }
@@ -392,8 +390,8 @@ main,
 ===================================================== */
 .nav-button:hover {
     color: var(--wire-text-bright);
-    background: var(--wire-hover);
-    border-color: var(--wire-text-bright);
+    background: var(--wire-hover-surface);
+    border-color: var(--wire-border-accent);
 }
 
 /* =====================================================
@@ -478,7 +476,7 @@ SETTINGS BUTTON
     min-width: 180px;
     padding: 8px;
     background: var(--wire-popup-window-bg);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--wire-border);
     border-radius: 8px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
     z-index: 1000;
@@ -494,7 +492,7 @@ SETTINGS BUTTON
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     border: 1px solid transparent;
     border-radius: 5px;
 }
@@ -502,7 +500,7 @@ SETTINGS BUTTON
 .settings-button-item:hover {
     color: var(--wire-text-bright);
     border-color: var(--wire-border-accent);
-    background: var(--wire-hover);
+    background: var(--wire-hover-surface);
 }
 
 

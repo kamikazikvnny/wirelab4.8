@@ -1,37 +1,4 @@
 /* =========================================================
-   SECTION HEADINGS
-========================================================= */
-.section-heading {
-    margin-bottom: 12px;
-}
-
-.section-label {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 10px;
-    font-weightfont-weight: 300;
-    letter-spacing: 1.4px;
-    color: var(--wire-accent);
-}
-
-.section-heading h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weightfont-weight: 300;
-    line-height: 1.2;
-    color: var(--wire-text);
-}
-
-.section-heading p {
-    margin: 6px 0 0;
-    font-size: 14px;
-    font-weightfont-weight: 300;
-    line-height: 1.5;
-    color: var(--wire-text-muted);
-}
-
-
-/* =========================================================
    HERO
 ========================================================= */
 .home-stencil-logo {
@@ -67,7 +34,7 @@
     display: block;
     margin-bottom: 6px;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1.5px;
     color: var(--wire-accent);
 }
@@ -75,7 +42,7 @@
 .home-hero h2 {
     margin: 0;
     font-size: 28px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.15;
     letter-spacing: 0;
     color: var(--wire-text);
@@ -85,7 +52,7 @@
     max-width: 480px;
     margin: 10px 0 16px;
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.5;
     color: var(--wire-text-muted);
 }
@@ -105,7 +72,7 @@
     background: var(--wire-card);
     color: var(--wire-text);
     font-size: 12px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 0.4px;
     text-decoration: none;
     cursor: pointer;
@@ -116,8 +83,8 @@
 }
 
 .hero-button:hover {
-    border-color: var(--wire-accent);
-    background: var(--wire-hover);
+    border-color: var(--wire-border-accent);
+    background: var(--wire-hover-surface);
     color: var(--wire-accent-bright);
 }
 
@@ -133,7 +100,7 @@
 .home-action-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
     width: 100%;
 }
 
@@ -143,10 +110,10 @@
     flex-direction: column;
     min-height: 170px;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.055);
+    background: var(--wire-card);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    border: 1px solid var(--wire-border);
     border-radius: 8px;
     color: var(--wire-text);
     text-decoration: none;
@@ -158,8 +125,8 @@
 }
 
 .home-action-card:hover {
-    background: rgba(255, 255, 255, 0.09);
-    border-color: rgba(255, 255, 255, 0.7);
+    background: var(--wire-hover);
+    border-color: var(--wire-border-accent);
     transform: translateY(-2px);
 }
 
@@ -167,7 +134,7 @@
     display: block;
     margin-bottom: 4px;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1.3px;
     color: var(--wire-accent);
 }
@@ -176,7 +143,7 @@
     display: block;
     margin-bottom: 3px;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1px;
     color: var(--wire-text-muted);
 }
@@ -184,7 +151,7 @@
 .home-action-card h3 {
     margin: 0;
     font-size: 18px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.25;
     color: var(--wire-text);
 }
@@ -192,7 +159,7 @@
 .home-action-card p {
     margin: 6px 0 11px;
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.45;
     color: var(--wire-text-muted);
 }
@@ -200,7 +167,7 @@
 .action-link {
     display: block;
     font-size: 11px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 0.7px;
     color: var(--wire-accent-bright);
 }
@@ -234,7 +201,7 @@
     display: block;
     margin-bottom: 4px;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1.2px;
     color: var(--wire-accent);
 }
@@ -242,7 +209,7 @@
 .progress-card h3 {
     margin: 0;
     font-size: 18px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.25;
     color: var(--wire-text);
 }
@@ -250,7 +217,7 @@
 .progress-card p {
     margin: 6px 0 0;
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.45;
     color: var(--wire-text-muted);
 }
@@ -264,14 +231,14 @@
 .progress-stat strong {
     display: inline-block;
     font-size: 24px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     color: var(--wire-text);
 }
 
 .progress-stat span {
     margin-left: 5px;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 0.9px;
     color: var(--wire-text-muted);
 }
@@ -288,7 +255,7 @@
     background: var(--wire-surface);
     color: var(--wire-text);
     font-size: 12px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 0.4px;
     text-decoration: none;
     transition:
@@ -297,8 +264,8 @@
 }
 
 .progress-button:hover {
-    background: var(--wire-hover);
-    border-color: var(--wire-accent);
+    background: var(--wire-hover-surface);
+    border-color: var(--wire-border-accent);
 }
 
 
@@ -332,15 +299,15 @@
 }
 
 .command-card:hover {
-    background: var(--wire-hover);
-    border-color: var(--wire-accent);
+    background: var(--wire-hover-surface);
+    border-color: var(--wire-border-accent);
 }
 
 .command-label {
     display: block;
     margin-bottom: 4px;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1.2px;
     color: var(--wire-accent);
 }
@@ -348,7 +315,7 @@
 .command-card h3 {
     margin: 0;
     font-size: 18px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.25;
     color: var(--wire-text);
 }
@@ -356,7 +323,7 @@
 .command-card p {
     margin: 6px 0 11px;
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.45;
     color: var(--wire-text-muted);
 }
@@ -364,7 +331,7 @@
 .command-link {
     display: block;
     font-size: 11px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 0.7px;
     color: var(--wire-accent-bright);
 }
@@ -391,7 +358,7 @@
 .home-lab-bench h2 {
     margin: 0;
     font-size: 26px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.15;
     color: var(--wire-text);
 }
@@ -399,7 +366,7 @@
 .home-lab-bench p {
     margin: 9px 0 14px;
     font-size: 14px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.5;
     color: var(--wire-text-muted);
 }

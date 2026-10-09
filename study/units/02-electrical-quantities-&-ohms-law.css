@@ -40,7 +40,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1.5px;
 
     color: var(--wire-accent);
@@ -56,7 +56,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 24px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.15;
     letter-spacing: 1px;
 
@@ -139,7 +139,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 17px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.6px;
 
@@ -192,7 +192,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 17px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     line-height: 1.35;
 
     color: var(--wire-text-bright);
@@ -253,7 +253,7 @@
 
     font-family: "Rajdhani", sans-serif;
     font-size: 10px;
-    font-weightfont-weight: 300;
+    font-weight: 300;
     letter-spacing: 1px;
 
     text-decoration: none;
