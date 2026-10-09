@@ -1,6 +1,6 @@
 * {
     font-family: "Inter", sans-serif;
-    font-weightfont-weight: 300;
+    font-weight: 300;
 }
 
 /* =====================================================
@@ -8,62 +8,79 @@
 ===================================================== */
 h1 {
     font-size: 28px;
-    font-weightfont-weight: 300;}
+    font-weight: 300;}
 h2 {
     font-size: 22px;
-    font-weightfont-weight: 300;}
+    font-weight: 300;}
 h3 {
     font-size: 18px;
-    font-weightfont-weight: 300;}
+    font-weight: 300;}
 body {
     font-size: 14px;
-    font-weightfont-weight: 300;}
+    font-weight: 300;}
+/* =====================================================
+   WIRELAB — TYPOGRAPHY
+===================================================== */
+h1 {
+    font-size: 28px;
+    font-weight: 300;}
+h2 {
+    font-size: 22px;
+    font-weight: 300;}
+h3 {
+    font-size: 18px;
+    font-weight: 300;}
+body {
+    font-size: 14px;
+    font-weight: 300;}
+    
 /* =====================================================
    WIRELAB — DARK THEME
 ===================================================== */
 :root {
---wire-bg: #0F1113;
+--wire-bg: rgb(15, 17, 19);
 
---wire-text: #2a2c2d;
---wire-text-muted: #8B9197;
---wire-text-bright: #F1F3F5;
+--wire-text: rgb(42, 44, 45);
+--wire-text-muted: rgb(139, 145, 151);
+--wire-text-bright: rgb(241, 243, 245);
 
---wire-border: #e177dd;
---wire-border-accent: #38f709;
+--wire-border: rgb(225, 119, 221);
+--wire-border-accent: rgb(56, 247, 9);
 
---wire-hover: #25292E;
+--wire-hover: rgb(37, 41, 46);
 --wire-hover-surface: rgba(24, 69, 81, 0.648);
---wire-active: #30343A;
+--wire-active: rgb(48, 52, 58);
 
---wire-accent: #79b994;
---wire-shadow: #ff1313;
+--wire-accent: rgb(225, 119, 221);
+--wire-shadow: rgb(255, 19, 19);
 
 --wire-shadow: rgba(0, 0, 0, 0.35);
 --wire-popup-window-bg: rgba(25, 27, 30, 0.97);
-    
+
 }
 /* =====================================================
    LIGHT THEME
 ===================================================== */
 [data-theme="light"] {
---wire-bg: #bbb7ac;
+--wire-bg: rgb(187, 183, 172);
 
---wire-text: #1b1f1a;
---wire-text-muted: #100e0e;
---wire-text-bright: #000000;
+--wire-text: rgb(27, 31, 26);
+--wire-text-muted: rgb(16, 14, 14);
+--wire-text-bright: rgb(0, 0, 0);
 
---wire-border: #b9a76c;
---wire-border-accent: #76a1cd;
+--wire-border: rgb(185, 167, 108);
+--wire-border-accent: rgb(118, 161, 205);
 
---wire-hover: #e3eae2;
---wire-hover-surface: #bbb7ac;
---wire-active: #bbb7ac;
+--wire-hover: rgb(227, 234, 226);
+--wire-hover-surface: rgb(187, 183, 172);
+--wire-active: rgb(187, 183, 172);
 
---wire-accent: #c9c5ba;
+--wire-accent: rgb(201, 197, 186);
 
 --wire-shadow: rgb(100, 102, 74);
 --wire-popup-window-bg: rgba(159, 156, 150, 0.75);
 }
+
 /* -- TEST ANSWER COLORS -- */
 .answer-choice.correct {
     border-color: rgba(80, 220, 120, 0.85);
