@@ -35,12 +35,13 @@
 
     box-shadow:
         0 8px 22px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
+        inset 0 1px 0 var(--wire-border-accent);
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 
@@ -110,7 +111,7 @@
 
     box-shadow:
         0 0 16px var(--wire-shadow),
-        inset 0 0 10px var(--wire-highlight);
+        inset 0 0 10px var(--wire-border-accent);
 }
 
 
@@ -153,7 +154,7 @@
 
     border: 1px solid var(--wire-border);
 
-    background: var(--wire-nav-surface);
+    background: var(--wire-hover-surface);
 
     color: var(--wire-text-muted);
 
@@ -202,7 +203,7 @@
     line-height: 1;
 
     text-shadow:
-        0 0 8px var(--wire-accent-glow-soft);
+        0 0 8px var(--wire-shadow);
 }
 
 
@@ -321,15 +322,10 @@
     width: 0%;
     height: 100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--wire-accent-bright),
-            var(--wire-accent)
-        );
+    background: var(--wire-accent);
 
     box-shadow:
-        0 0 10px var(--wire-accent-glow-soft);
+        0 0 10px var(--wire-shadow);
 
     transition: width 0.3s ease;
 }
@@ -385,7 +381,7 @@
 
     box-shadow:
         0 6px 18px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
+        inset 0 1px 0 var(--wire-border-accent);
 }
 
 
@@ -576,7 +572,7 @@
 
     box-shadow:
         0 18px 50px rgba(0, 0, 0, 0.65),
-        inset 0 1px 0 var(--wire-highlight);
+        inset 0 1px 0 var(--wire-border-accent);
 }
 
 
@@ -692,7 +688,7 @@
     background: var(--wire-hover-surface);
 
     box-shadow:
-        0 0 10px var(--wire-accent-glow-soft);
+        0 0 10px var(--wire-shadow);
 }
 
 
@@ -749,7 +745,7 @@
     border-color: var(--wire-accent);
 
     box-shadow:
-        0 0 8px var(--wire-accent-glow-soft);
+        0 0 8px var(--wire-shadow);
 }
 
 
@@ -773,7 +769,7 @@
 
     border: 1px solid var(--wire-border);
 
-    background: var(--wire-nav-surface);
+    background: var(--wire-hover-surface);
 
     color: var(--wire-text-muted);
 

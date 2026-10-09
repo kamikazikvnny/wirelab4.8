@@ -28,14 +28,15 @@ body {
 --wire-text-muted: #8B9197;
 --wire-text-bright: #F1F3F5;
 
---wire-border: #2A2D31;
---wire-border-accent: #4A4F55;
+--wire-border: #e177dd;
+--wire-border-accent: #38f709;
 
 --wire-hover: #25292E;
---wire-hover-surface: rgba(195, 41, 174, 0.12);
+--wire-hover-surface: rgba(24, 69, 81, 0.648);
 --wire-active: #30343A;
 
---wire-accent: #7995B9;
+--wire-accent: #79b994;
+--wire-shadow: #ff1313;
 
 --wire-shadow: rgba(0, 0, 0, 0.35);
 --wire-popup-window-bg: rgba(25, 27, 30, 0.97);

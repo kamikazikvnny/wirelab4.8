@@ -1,63 +1,32 @@
 /* =========================================================
-   WIRELAB — HOME PAGE
-   Clean / Modern / Sleek
-========================================================= */
-
-
-/* =========================================================
-   HOME CONTENT
-========================================================= */
-
-.home-content {
-    padding-bottom: 40px;
-}
-
-.home-stencil-logo {
-    width: 180px;
-    height: auto;
-    margin: 0 auto 20px;
-    opacity: 0.7;
-    object-fit: contain;
-}
-
-
-/* =========================================================
    SECTION HEADINGS
 ========================================================= */
-
 .section-heading {
     margin-bottom: 12px;
 }
 
 .section-label {
     display: block;
-
     margin-bottom: 4px;
-
     font-size: 10px;
     font-weightfont-weight: 300;
     letter-spacing: 1.4px;
-
     color: var(--wire-accent);
 }
 
 .section-heading h2 {
     margin: 0;
-
     font-size: 22px;
     font-weightfont-weight: 300;
     line-height: 1.2;
-
     color: var(--wire-text);
 }
 
 .section-heading p {
     margin: 6px 0 0;
-
     font-size: 14px;
     font-weightfont-weight: 300;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
@@ -65,32 +34,33 @@
 /* =========================================================
    HERO
 ========================================================= */
+.home-stencil-logo {
+    width: 180px;
+    height: auto;
+    margin: 0 auto 20px;
+    opacity: 0.7;
+    object-fit: contain;
+    transform: translateY(-20px);
+}
 
 .home-hero {
     position: relative;
-
     width: 100%;
-    min-height: 260px;
-
-    margin-bottom: 14px;
-
+    min-height: 200px;
+    margin-bottom: 16px;
     display: flex;
     align-items: flex-end;
-
     border: 1px solid var(--wire-border);
     border-radius: 6px;
-
     background: var(--wire-surface);
-
     box-shadow:
         0 8px 24px var(--wire-shadow);
-
     overflow: hidden;
 }
 
 .home-hero-content {
     width: 100%;
-    padding: 24px 18px;
+    padding: 16px 18px;
 }
 
 .hero-label {
@@ -113,13 +83,10 @@
 
 .home-hero p {
     max-width: 480px;
-
     margin: 10px 0 16px;
-
     font-size: 14px;
     font-weightfont-weight: 300;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
@@ -127,31 +94,21 @@
 /* =========================================================
    BUTTONS
 ========================================================= */
-
 .hero-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 32px;
-
     padding: 0 14px;
-
     border: 1px solid var(--wire-border);
     border-radius: 4px;
-
     background: var(--wire-card);
-
     color: var(--wire-text);
-
     font-size: 12px;
     font-weightfont-weight: 300;
     letter-spacing: 0.4px;
-
     text-decoration: none;
-
     cursor: pointer;
-
     transition:
         background 0.15s ease,
         border-color 0.15s ease,
@@ -168,7 +125,6 @@
 /* =========================================================
    CORE LOOP
 ========================================================= */
-
 .home-loop {
     width: 100%;
     margin-bottom: 18px;
@@ -187,19 +143,14 @@
     flex-direction: column;
     min-height: 170px;
     padding: 16px;
-    
     background: rgba(255, 255, 255, 0.055);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 8px;
-
     color: var(--wire-text);
     text-decoration: none;
-
     overflow: hidden;
-
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -214,55 +165,43 @@
 
 .action-number {
     display: block;
-
     margin-bottom: 4px;
-
     font-size: 10px;
     font-weightfont-weight: 300;
     letter-spacing: 1.3px;
-
     color: var(--wire-accent);
 }
 
 .action-label {
     display: block;
-
     margin-bottom: 3px;
-
     font-size: 10px;
     font-weightfont-weight: 300;
     letter-spacing: 1px;
-
     color: var(--wire-text-muted);
 }
 
 .home-action-card h3 {
     margin: 0;
-
     font-size: 18px;
     font-weightfont-weight: 300;
     line-height: 1.25;
-
     color: var(--wire-text);
 }
 
 .home-action-card p {
     margin: 6px 0 11px;
-
     font-size: 14px;
     font-weightfont-weight: 300;
     line-height: 1.45;
-
     color: var(--wire-text-muted);
 }
 
 .action-link {
     display: block;
-
     font-size: 11px;
     font-weightfont-weight: 300;
     letter-spacing: 0.7px;
-
     color: var(--wire-accent-bright);
 }
 
@@ -270,7 +209,6 @@
 /* =========================================================
    CONTINUE STUDYING
 ========================================================= */
-
 .home-progress {
     width: 100%;
     margin-bottom: 18px;
@@ -278,17 +216,12 @@
 
 .progress-card {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     padding: 15px;
-
     border: 1px solid var(--wire-border);
     border-radius: 5px;
-
     background: var(--wire-card);
-
     box-shadow:
         0 6px 20px var(--wire-shadow);
 }
@@ -299,59 +232,47 @@
 
 .progress-label {
     display: block;
-
     margin-bottom: 4px;
-
     font-size: 10px;
     font-weightfont-weight: 300;
     letter-spacing: 1.2px;
-
     color: var(--wire-accent);
 }
 
 .progress-card h3 {
     margin: 0;
-
     font-size: 18px;
     font-weightfont-weight: 300;
     line-height: 1.25;
-
     color: var(--wire-text);
 }
 
 .progress-card p {
     margin: 6px 0 0;
-
     font-size: 14px;
     font-weightfont-weight: 300;
     line-height: 1.45;
-
     color: var(--wire-text-muted);
 }
 
 .progress-stat {
     margin-top: 14px;
     padding-top: 12px;
-
     border-top: 1px solid var(--wire-border);
 }
 
 .progress-stat strong {
     display: inline-block;
-
     font-size: 24px;
     font-weightfont-weight: 300;
-
     color: var(--wire-text);
 }
 
 .progress-stat span {
     margin-left: 5px;
-
     font-size: 10px;
     font-weightfont-weight: 300;
     letter-spacing: 0.9px;
-
     color: var(--wire-text-muted);
 }
 
@@ -359,25 +280,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
     min-height: 32px;
-
     margin-top: 12px;
-
     border: 1px solid var(--wire-border);
     border-radius: 4px;
-
     background: var(--wire-surface);
-
     color: var(--wire-text);
-
     font-size: 12px;
     font-weightfont-weight: 300;
     letter-spacing: 0.4px;
-
     text-decoration: none;
-
     transition:
         background 0.15s ease,
         border-color 0.15s ease;
@@ -392,7 +305,6 @@
 /* =========================================================
    LAB COMMAND CENTER
 ========================================================= */
-
 .home-command-center {
     width: 100%;
     margin-bottom: 18px;
@@ -400,29 +312,20 @@
 
 .command-grid {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 8px;
 }
 
 .command-card {
     width: 100%;
-
     display: block;
-
     padding: 15px;
-
     border: 1px solid var(--wire-border);
     border-radius: 5px;
-
     background: var(--wire-card);
-
     color: var(--wire-text);
-
     text-decoration: none;
-
     transition:
         background 0.15s ease,
         border-color 0.15s ease;
@@ -435,43 +338,34 @@
 
 .command-label {
     display: block;
-
     margin-bottom: 4px;
-
     font-size: 10px;
     font-weightfont-weight: 300;
     letter-spacing: 1.2px;
-
     color: var(--wire-accent);
 }
 
 .command-card h3 {
     margin: 0;
-
     font-size: 18px;
     font-weightfont-weight: 300;
     line-height: 1.25;
-
     color: var(--wire-text);
 }
 
 .command-card p {
     margin: 6px 0 11px;
-
     font-size: 14px;
     font-weightfont-weight: 300;
     line-height: 1.45;
-
     color: var(--wire-text-muted);
 }
 
 .command-link {
     display: block;
-
     font-size: 11px;
     font-weightfont-weight: 300;
     letter-spacing: 0.7px;
-
     color: var(--wire-accent-bright);
 }
 
@@ -479,20 +373,14 @@
 /* =========================================================
    LAB BENCH
 ========================================================= */
-
 .home-lab-bench {
     width: 100%;
-
     margin-bottom: 10px;
-
     border: 1px solid var(--wire-border);
     border-radius: 6px;
-
     background: var(--wire-surface);
-
     box-shadow:
         0 8px 24px var(--wire-shadow);
-
     overflow: hidden;
 }
 
@@ -502,54 +390,16 @@
 
 .home-lab-bench h2 {
     margin: 0;
-
     font-size: 26px;
     font-weightfont-weight: 300;
     line-height: 1.15;
-
     color: var(--wire-text);
 }
 
 .home-lab-bench p {
     margin: 9px 0 14px;
-
     font-size: 14px;
     font-weightfont-weight: 300;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 400px) {
-
-    .home-content {
-        padding-bottom: 30px;
-    }
-
-    .home-hero {
-        min-height: 230px;
-    }
-
-    .home-hero-content {
-        padding: 20px 14px;
-    }
-
-    .home-hero h2 {
-        font-size: 26px;
-    }
-
-    .home-action-card,
-    .command-card,
-    .progress-card {
-        padding: 13px;
-    }
-
-    .lab-bench-content {
-        padding: 20px 14px;
-    }
 }
