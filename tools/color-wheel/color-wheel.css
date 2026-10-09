@@ -145,7 +145,7 @@
     color: #d6a84f;
 
     font-size: 0.78rem;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.15em;
 
     text-shadow:
@@ -208,7 +208,7 @@
         monospace;
 
     font-size: 0.85rem;
-    : 700;
+    font-weight: 300;
 
     box-shadow:
         0 2px 0 rgba(0, 0, 0, 0.35);
@@ -290,7 +290,7 @@
     color: #eeeeee;
 
     font-size: 1rem;
-    : 600;
+    font-weight: 300;
 }
 
 
@@ -337,7 +337,7 @@
     color: #d6a84f;
 
     font: inherit;
-    : 600;
+    font-weight: 300;
 
     text-align: right;
 
@@ -374,7 +374,7 @@
     color: #ffffff;
 
     font: inherit;
-    : 600;
+    font-weight: 300;
 
     text-align: right;
 }
@@ -427,7 +427,7 @@
     color: #d6a84f;
 
     font-size: 0.8rem;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.12em;
 }
 
@@ -482,7 +482,7 @@
     color: #ffffff;
 
     font-size: 0.9rem;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.08em;
 
     cursor: pointer;
@@ -543,7 +543,7 @@
     color: #d6a84f;
 
     font-size: 0.85rem;
-    : 700;
+    font-weight: 300;
 }
 
 .practice-answer input {
@@ -597,7 +597,7 @@
 
     color: #ffffff;
 
-    : 700;
+    font-weight: 300;
 
     cursor: pointer;
 }
@@ -650,7 +650,7 @@
     color: #d6a84f;
 
     font-size: 1rem;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.15em;
 
     text-align: center;
@@ -684,7 +684,7 @@
     color: #ffffff;
 
     font-size: 2rem;
-    : 700;
+    font-weight: 300;
 
     overflow: hidden;
 }
@@ -717,7 +717,7 @@
     color: #ffffff;
 
     font-size: 1.2rem;
-    : 700;
+    font-weight: 300;
 
     cursor: pointer;
 }
@@ -801,7 +801,7 @@
     color: #d6a84f;
 
     font-size: 0.8rem;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.12em;
 }
 

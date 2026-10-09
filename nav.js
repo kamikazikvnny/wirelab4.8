@@ -454,8 +454,16 @@ else if (
     const logoImage = stencilLogo.querySelector("img");
 
     if (logoImage) {
-        logoImage.src =
-            `${prefix}z-images/wirelab-stencil-logo.webp`;
+        const mobileScreen = window.matchMedia("(max-width: 600px)");
+
+function updateStencilLogo() {
+    logoImage.src = mobileScreen.matches
+        ? `${prefix}z-images/wirelab-stencil-logo3.webp`
+        : `${prefix}z-images/wirelab-stencil-logo.webp`;
+}
+
+updateStencilLogo();
+mobileScreen.addEventListener("change", updateStencilLogo);
     }
 
 }

@@ -1,6 +1,6 @@
 * {
     font-family: "Inter", sans-serif;
-    font-weight: 300;
+    font-weightfont-weight: 300;
 }
 
 /* =====================================================
@@ -8,57 +8,60 @@
 ===================================================== */
 h1 {
     font-size: 28px;
-    font-weight: 300;}
+    font-weightfont-weight: 300;}
 h2 {
     font-size: 22px;
-    font-weight: 300;}
+    font-weightfont-weight: 300;}
 h3 {
     font-size: 18px;
-    font-weight: 300;}
+    font-weightfont-weight: 300;}
 body {
     font-size: 14px;
-    font-weight: 300;}
+    font-weightfont-weight: 300;}
 /* =====================================================
    WIRELAB — DARK THEME
 ===================================================== */
 :root {
-    --wire-bg: #0F1113;
+--wire-bg: #0F1113;
 
-    --wire-text: #D7DADC;
-    --wire-text-muted: #8B9197;
-    --wire-text-bright: #F1F3F5;
+--wire-text: #2a2c2d;
+--wire-text-muted: #8B9197;
+--wire-text-bright: #F1F3F5;
 
-    --wire-border: #2A2D31;
-    --wire-border-accent: #4A4F55;
+--wire-border: #2A2D31;
+--wire-border-accent: #4A4F55;
 
-    --wire-hover-surface: #c329ae6a;
-    --wire-active: #30343A;
+--wire-hover: #25292E;
+--wire-hover-surface: rgba(195, 41, 174, 0.12);
+--wire-active: #30343A;
 
-    --wire-accent: #7995b9;
+--wire-accent: #7995B9;
 
-    --wire-shadow: rgba(0, 0, 0, 0.35);
-    --wire-popup-window-bg: rgba(255, 255, 255, 0.25);
+--wire-shadow: rgba(0, 0, 0, 0.35);
+--wire-popup-window-bg: rgba(25, 27, 30, 0.97);
     
 }
 /* =====================================================
    LIGHT THEME
 ===================================================== */
 [data-theme="light"] {
-    --wire-bg: #424b55;
+--wire-bg: #bbb7ac;
 
-    --wire-text: #D7DADC;
-    --wire-text-muted: #8B9197;
-    --wire-text-bright: #F1F3F5;
+--wire-text: #1b1f1a;
+--wire-text-muted: #100e0e;
+--wire-text-bright: #000000;
 
-    --wire-border: #2A2D31;
-    --wire-border-accent: #4A4F55;
+--wire-border: #b9a76c;
+--wire-border-accent: #76a1cd;
 
-    --wire-hover: #24272B;
-    --wire-active: #30343A;
+--wire-hover: #e3eae2;
+--wire-hover-surface: #bbb7ac;
+--wire-active: #bbb7ac;
 
-    --wire-accent: #b9a979;
+--wire-accent: #c9c5ba;
 
-    --wire-shadow: rgba(0, 0, 0, 0.35);
+--wire-shadow: rgb(100, 102, 74);
+--wire-popup-window-bg: rgba(159, 156, 150, 0.75);
 }
 /* -- TEST ANSWER COLORS -- */
 .answer-choice.correct {
@@ -186,18 +189,26 @@ main,
 
 .nav-menu-button:hover {
     background: var(--wire-hover-surface);
+    border-radius: 6px;
+}
+
+.nav-menu-container:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 
 /* =====================================================
    NAV MENU CONTAINER
 ===================================================== */
-
 .nav-menu-container {
     position: relative;
-
     display: flex;
     align-items: center;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
 }
 
 
@@ -245,7 +256,7 @@ main,
     text-decoration: none;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
 
     border: 1px solid transparent;
     border-radius: 5px;
@@ -254,9 +265,9 @@ main,
 }
 
 .nav-menu-item:hover {
-    border-color: rgba(255, 255, 255, 0.8);
-
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--wire-text-bright);
+    border-color: var(--wire-border-accent);
+    background: var(--wire-hover);
 }
 
 
@@ -281,7 +292,8 @@ main,
     width: 29px;
     height: 29px;
     transform: translate(-1px, 2px);
-    margin-left: 12px;
+    margin-left: 10px;
+    margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,14 +309,23 @@ main,
     height: 62px;
     object-fit: contain;
     margin-left: 7px;
+    opacity: 0.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .wirelab-stencil-logo img {
-        width: 42px;
-        height: 42px;
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
     }
 
+.wirelab-stencil-logo img {
+    transition: opacity 0.2s ease;
+}
+
+.wirelab-stencil-logo:hover img {
+    opacity: 1;
+}
 }
 
 
@@ -455,14 +476,15 @@ SETTINGS BUTTON
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     border: 1px solid transparent;
     border-radius: 5px;
 }
 
 .settings-button-item:hover {
-    border-color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--wire-text-bright);
+    border-color: var(--wire-border-accent);
+    background: var(--wire-hover);
 }
 
 

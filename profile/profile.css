@@ -159,7 +159,7 @@
 
     font-family: inherit;
     font-size: 9px;
-    : 300;
+    font-weight: 300;
     transform: translateY(-6px);
 
     cursor: pointer;
@@ -198,7 +198,7 @@
 
     font-family: "Reddit Sans", sans-serif;
     font-size: 20px;
-    : 10;
+    font-weight: 300;
     line-height: 1;
 
     text-shadow:
@@ -248,7 +248,7 @@
 
 
 .status-item strong {
-    color: var(--wire-accent);
+    color: var(--wire-text);
 
     font-size: 14px;
 }
@@ -285,7 +285,7 @@
     color: var(--wire-accent);
 
     font-size: 13px;
-    : 700;
+    font-weight: 300;
 
     letter-spacing: 0.5px;
 }
@@ -295,7 +295,7 @@
     color: var(--wire-accent);
 
     font-size: 12px;
-    : 700;
+    font-weight: 300;
 }
 
 
@@ -498,7 +498,7 @@
 
     font-family: inherit;
     font-size: 9px;
-    : 600;
+    font-weight: 300;
 
     cursor: pointer;
 
@@ -721,7 +721,7 @@
     color: var(--wire-text-muted);
 
     font-size: 9px;
-    : 600;
+    font-weight: 300;
 }
 
 
@@ -779,7 +779,7 @@
 
     font-family: inherit;
     font-size: 9px;
-    : 600;
+    font-weight: 300;
 
     cursor: pointer;
 

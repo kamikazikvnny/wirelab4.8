@@ -25,7 +25,7 @@
     margin-bottom: 4px;
     font-family: "Rajdhani", sans-serif;
     font-size: 10px;
-    : 700;
+    font-weight: 300;
     letter-spacing: 1.5px;
     color: var(--wire-accent-bright);
 }
@@ -35,7 +35,7 @@
     margin: 0;
     font-family: "Rajdhani", sans-serif;
     font-size: 22px;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.8px;
     color: var(--wire-text);
 }
@@ -91,7 +91,7 @@
     margin-bottom: 8px;
     font-family: "Rajdhani", sans-serif;
     font-size: 9px;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.8px;
     color: var(--wire-text-muted);
 }
@@ -108,7 +108,7 @@
     padding: 4px 0;
     font-family: "Rajdhani", sans-serif;
     font-size: 9px;
-    : 700;
+    font-weight: 300;
     letter-spacing: 0.6px;
     border: 1px solid var(--wire-border);
 }
@@ -158,7 +158,7 @@
     color: var(--wire-text);
     font-family: "Rajdhani", sans-serif;
     font-size: 12px;
-    : 600;
+    font-weight: 300;
     letter-spacing: 0.3px;
     text-align: left;
     cursor: pointer;
@@ -195,7 +195,7 @@
 .lab-next {
     font-family: "Rajdhani", sans-serif;
     font-size: 11px;
-    : 700;
+    font-weight: 300;
     letter-spacing: 1px;
     color: var(--wire-text);
     text-decoration: none;

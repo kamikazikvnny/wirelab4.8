@@ -12,6 +12,14 @@
     padding-bottom: 40px;
 }
 
+.home-stencil-logo {
+    width: 180px;
+    height: auto;
+    margin: 0 auto 20px;
+    opacity: 0.7;
+    object-fit: contain;
+}
+
 
 /* =========================================================
    SECTION HEADINGS
@@ -27,7 +35,7 @@
     margin-bottom: 4px;
 
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 1.4px;
 
     color: var(--wire-accent);
@@ -37,7 +45,7 @@
     margin: 0;
 
     font-size: 22px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.2;
 
     color: var(--wire-text);
@@ -47,7 +55,7 @@
     margin: 6px 0 0;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.5;
 
     color: var(--wire-text-muted);
@@ -82,37 +90,24 @@
 
 .home-hero-content {
     width: 100%;
-
     padding: 24px 18px;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent,
-            rgba(7, 14, 16, 0.45)
-        );
 }
 
 .hero-label {
     display: block;
-
     margin-bottom: 6px;
-
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 1.5px;
-
     color: var(--wire-accent);
 }
 
 .home-hero h2 {
     margin: 0;
-
     font-size: 28px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.15;
     letter-spacing: 0;
-
     color: var(--wire-text);
 }
 
@@ -122,7 +117,7 @@
     margin: 10px 0 16px;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.5;
 
     color: var(--wire-text-muted);
@@ -150,7 +145,7 @@
     color: var(--wire-text);
 
     font-size: 12px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 0.4px;
 
     text-decoration: none;
@@ -223,7 +218,7 @@
     margin-bottom: 4px;
 
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 1.3px;
 
     color: var(--wire-accent);
@@ -235,7 +230,7 @@
     margin-bottom: 3px;
 
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 1px;
 
     color: var(--wire-text-muted);
@@ -245,7 +240,7 @@
     margin: 0;
 
     font-size: 18px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.25;
 
     color: var(--wire-text);
@@ -255,7 +250,7 @@
     margin: 6px 0 11px;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.45;
 
     color: var(--wire-text-muted);
@@ -265,7 +260,7 @@
     display: block;
 
     font-size: 11px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 0.7px;
 
     color: var(--wire-accent-bright);
@@ -308,7 +303,7 @@
     margin-bottom: 4px;
 
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 1.2px;
 
     color: var(--wire-accent);
@@ -318,7 +313,7 @@
     margin: 0;
 
     font-size: 18px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.25;
 
     color: var(--wire-text);
@@ -328,7 +323,7 @@
     margin: 6px 0 0;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.45;
 
     color: var(--wire-text-muted);
@@ -345,7 +340,7 @@
     display: inline-block;
 
     font-size: 24px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
 
     color: var(--wire-text);
 }
@@ -354,7 +349,7 @@
     margin-left: 5px;
 
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 0.9px;
 
     color: var(--wire-text-muted);
@@ -378,7 +373,7 @@
     color: var(--wire-text);
 
     font-size: 12px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 0.4px;
 
     text-decoration: none;
@@ -444,7 +439,7 @@
     margin-bottom: 4px;
 
     font-size: 10px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 1.2px;
 
     color: var(--wire-accent);
@@ -454,7 +449,7 @@
     margin: 0;
 
     font-size: 18px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.25;
 
     color: var(--wire-text);
@@ -464,7 +459,7 @@
     margin: 6px 0 11px;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.45;
 
     color: var(--wire-text-muted);
@@ -474,7 +469,7 @@
     display: block;
 
     font-size: 11px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     letter-spacing: 0.7px;
 
     color: var(--wire-accent-bright);
@@ -509,7 +504,7 @@
     margin: 0;
 
     font-size: 26px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.15;
 
     color: var(--wire-text);
@@ -519,7 +514,7 @@
     margin: 9px 0 14px;
 
     font-size: 14px;
-    font-weight: 300;
+    font-weightfont-weight: 300;
     line-height: 1.5;
 
     color: var(--wire-text-muted);
