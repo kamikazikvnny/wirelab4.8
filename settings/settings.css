@@ -26,7 +26,7 @@
 
     background: rgba(255, 255, 255, 0.035);
 
-    border: 1px solid var(--wire-border);
+    border: 1px solid var(--wire-accent);
     border-radius: 8px;
 
     box-shadow:
@@ -150,7 +150,7 @@
 
     padding: 0 10px;
 
-    border: 1px solid var(--wire-border);
+    border: 1px solid var(--wire-accent);
     border-radius: 4px;
 
     background: transparent;

@@ -99,35 +99,37 @@ body {
     --wire-danger: rgb(160, 64, 58);
 }
 
+
 /* =====================================================
-   THEME 3 — NEON GRAPHITE
-   Graphite / Neon Royal / Electric Purple
+   THEME 3 — NEON ROYAL
+   Graphite / Muted Neon Purple / Magenta
 ===================================================== */
 [data-theme="neon-royal"] {
 
-    /* BACKGROUNDS — GRAPHITE */
-    --wire-bg: rgb(18, 18, 20);
+    /* BACKGROUNDS */
+    --wire-bg: rgb(16, 16, 18);
     --wire-surface: rgb(25, 25, 28);
-    --wire-card: rgb(32, 32, 36);
+    --wire-card: rgb(30, 30, 33);
     --wire-popup-window-bg: rgba(25, 25, 28, 0.98);
 
-    /* TEXT — SUBTLE HIERARCHY */
-    --wire-text: rgb(215, 215, 222);
-    --wire-text-muted: rgb(145, 145, 157);
-    --wire-text-bright: rgb(242, 242, 248);
+    /* TEXT */
+    --wire-text: rgb(45, 45, 58);
+    --wire-text-muted: rgb(105, 105, 114);
+    --wire-text-bright: rgb(220, 220, 225);
 
-    /* BORDERS — NEON PINK & PURPLE */
-    --wire-border: rgb(65, 55, 72);
-    --wire-border-accent: rgb(200, 161, 184);
+    /* BORDERS */
+    --wire-border: rgb(66, 62, 69);
+    --wire-border-accent: rgba(150, 109, 149)
 
     /* INTERACTIONS */
-    --wire-hover: rgb(40, 37, 45);
-    --wire-hover-surface: rgba(255, 45, 170, 0.08);
-    --wire-active: rgba(81, 30, 120, 0.34);
+    --wire-hover: rgb(38, 35, 41);
+    --wire-hover-surface: rgba(194, 105, 196, 0.10);
+    --wire-active: rgba(194, 105, 196, 0.15);
 
     /* ACCENTS */
-    --wire-accent: rgb(101, 76, 91);
-    --wire-accent-bright: rgb(200, 110, 255);
+    --wire-accent: rgb(190, 103, 191);
+    --wire-accent-bright: rgb(207, 132, 207);
+    --wire-accent-dim: rgba(112, 73, 114);
 
     /* SHADOWS */
     --wire-shadow: rgba(0, 0, 0, 0.35);
@@ -136,8 +138,10 @@ body {
     /* STATUS COLORS */
     --wire-success: rgb(104, 190, 143);
     --wire-warning: rgb(224, 178, 94);
-    --wire-danger: rgb(255, 92, 125);
+    --wire-danger: rgb(141, 18, 24);
+    --nav-button-active: rgba(95, 76, 99, 0.344);
 }
+
 
 /* =====================================================
    WIRELAB — GLOBAL NAVIGATION
@@ -185,10 +189,11 @@ main,
 }
 
 /* =====================================================
-  SITE HEADER & OUTER GLOW
+  SITE HEADER
 ===================================================== */
 .site-header {
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
@@ -217,7 +222,7 @@ main,
 
     position: relative;
 
-    border-bottom: 1px solid var(--wire-border);
+    border-bottom: 1px solid var(--wire-accent);
     background: var(--wire-bg);
 
     pointer-events: auto;
@@ -432,7 +437,7 @@ main,
 ===================================================== */
 .nav-button.active {
     color: var(--wire-text-bright);
-    background: var(--wire-active);
+    background: var(--nav-button-active);
     border-color: var(--wire-accent);
 }
 
@@ -446,9 +451,7 @@ main,
     flex: 1 1 auto;
     min-width: 0;
     gap: 0px;
-    margin-left: auto; /* keeps logo + bulb locked and links centered */
-    margin-right: auto; /* keeps logo + bulb locked and links centered */
-    overflow: visible;
+ 
 }
 
 
