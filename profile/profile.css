@@ -64,7 +64,7 @@
         linear-gradient(
             90deg,
             transparent,
-            var(--wire-accent),
+            var(--wire-border),
             transparent
         );
 
@@ -111,7 +111,7 @@
 
     box-shadow:
         0 0 16px var(--wire-shadow),
-        inset 0 0 10px var(--wire-border-accent);
+        inset 0 0 10px var(--wire-border);
 }
 
 
@@ -173,11 +173,11 @@
 
 
 .edit-button:hover {
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     background: var(--wire-hover-surface);
 
-    border-color: var(--wire-accent);
+    border-color: var(--wire-border);
 }
 
 
@@ -195,7 +195,7 @@
 .profile-info h1 {
     margin: 0 0 4px;
 
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     font-family: "Reddit Sans", sans-serif;
     font-size: 20px;
@@ -283,7 +283,7 @@
 .profile-card h2 {
     margin: 0;
 
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     font-size: 13px;
     font-weight: 300;
@@ -293,7 +293,7 @@
 
 
 .progress-percent {
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     font-size: 12px;
     font-weight: 300;
@@ -322,7 +322,7 @@
     width: 0%;
     height: 100%;
 
-    background: var(--wire-accent);
+    background: var(--wire-border);
 
     box-shadow:
         0 0 10px var(--wire-shadow);
@@ -333,11 +333,8 @@
 
 .progress-text {
     margin: 8px 0 0;
-
     color: var(--wire-text-muted);
-
     font-size: 10px;
-
     text-align: center;
 }
 
@@ -348,13 +345,9 @@
 
 .profile-stats {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 8px;
-
     width: 100%;
-
     margin-bottom: 12px;
 }
 
@@ -362,45 +355,34 @@
 .stat-card {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     min-width: 0;
-
     padding: 13px 5px;
-
     background:
         linear-gradient(
             135deg,
             rgba(255, 255, 255, 0.06),
             rgba(255, 255, 255, 0.02)
         );
-
     border: 1px solid var(--wire-border);
-
     box-shadow:
         0 6px 18px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-border-accent);
+        inset 0 1px 0 var(--wire-border);
 }
 
 
 .stat-card strong {
-    color: var(--wire-accent);
-
+    color: var(--wire-border);
     font-size: 19px;
-
     line-height: 1;
 }
 
 
 .stat-card span {
     margin-top: 6px;
-
     color: var(--wire-text-muted);
-
     font-size: 8px;
-
     text-align: center;
 }
 
@@ -411,33 +393,22 @@
 
 .quick-access {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 8px;
-
     margin-top: 12px;
 }
 
 
 .quick-link {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     min-width: 0;
-
     padding: 10px 12px;
-
     color: var(--wire-text-muted);
-
     text-decoration: none;
-
     background: rgba(255, 255, 255, 0.035);
-
     border: 1px solid var(--wire-border);
-
     transition:
         color 0.2s ease,
         background 0.2s ease,
@@ -446,16 +417,16 @@
 
 
 .quick-link:hover {
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     background: var(--wire-hover-surface);
 
-    border-color: var(--wire-accent);
+    border-color: var(--wire-border);
 }
 
 
 .quick-link span:last-child {
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     font-size: 14px;
 }
@@ -506,11 +477,11 @@
 
 
 .reset-button:hover {
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     background: var(--wire-hover-surface);
 
-    border-color: var(--wire-accent);
+    border-color: var(--wire-border);
 }
 
 
@@ -572,7 +543,7 @@
 
     box-shadow:
         0 18px 50px rgba(0, 0, 0, 0.65),
-        inset 0 1px 0 var(--wire-border-accent);
+        inset 0 1px 0 var(--wire-border);
 }
 
 
@@ -583,7 +554,7 @@
 .profile-modal-box h2 {
     margin: 0 0 14px;
 
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     font-size: 15px;
 
@@ -683,7 +654,7 @@
 
 
 .modal-profile-option.selected {
-    border-color: var(--wire-accent);
+    border-color: var(--wire-border);
 
     background: var(--wire-hover-surface);
 
@@ -732,7 +703,7 @@
 
     border: 1px solid var(--wire-border);
 
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     font-family: inherit;
     font-size: 11px;
@@ -742,7 +713,7 @@
 
 
 .form-group input:focus {
-    border-color: var(--wire-accent);
+    border-color: var(--wire-border);
 
     box-shadow:
         0 0 8px var(--wire-shadow);
@@ -787,11 +758,11 @@
 
 
 .modal-button:hover {
-    color: var(--wire-accent);
+    color: var(--wire-border);
 
     background: var(--wire-hover-surface);
 
-    border-color: var(--wire-accent);
+    border-color: var(--wire-border);
 }
 
 

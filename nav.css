@@ -24,8 +24,7 @@ body {
    Graphite / Slate / Electric Teal
 ===================================================== */
 :root {
-
-    /* BACKGROUNDS — lowest to highest depth */
+    /* BACKGROUNDS */
     --wire-bg: rgb(16, 19, 22);
     --wire-surface: rgb(22, 27, 32);
     --wire-card: rgb(28, 34, 40);
@@ -49,7 +48,7 @@ body {
     --wire-accent: rgb(66, 199, 181);
     --wire-accent-bright: rgb(111, 224, 207);
 
-    /* DEPTH */
+    /* SHADOWS */
     --wire-shadow: rgba(0, 0, 0, 0.35);
     --wire-shadow-deep: rgba(0, 0, 0, 0.55);
 
@@ -57,7 +56,6 @@ body {
     --wire-success: rgb(104, 190, 143);
     --wire-warning: rgb(224, 178, 94);
     --wire-danger: rgb(220, 105, 111);
-
 }
 
 
@@ -101,6 +99,45 @@ body {
     --wire-danger: rgb(160, 64, 58);
 }
 
+/* =====================================================
+   THEME 3 — NEON GRAPHITE
+   Graphite / Neon Royal / Electric Purple
+===================================================== */
+[data-theme="neon-royal"] {
+
+    /* BACKGROUNDS — GRAPHITE */
+    --wire-bg: rgb(18, 18, 20);
+    --wire-surface: rgb(25, 25, 28);
+    --wire-card: rgb(32, 32, 36);
+    --wire-popup-window-bg: rgba(25, 25, 28, 0.98);
+
+    /* TEXT — SUBTLE HIERARCHY */
+    --wire-text: rgb(215, 215, 222);
+    --wire-text-muted: rgb(145, 145, 157);
+    --wire-text-bright: rgb(242, 242, 248);
+
+    /* BORDERS — NEON PINK & PURPLE */
+    --wire-border: rgb(65, 55, 72);
+    --wire-border-accent: rgb(200, 161, 184);
+
+    /* INTERACTIONS */
+    --wire-hover: rgb(40, 37, 45);
+    --wire-hover-surface: rgba(255, 45, 170, 0.08);
+    --wire-active: rgba(81, 30, 120, 0.34);
+
+    /* ACCENTS */
+    --wire-accent: rgb(101, 76, 91);
+    --wire-accent-bright: rgb(200, 110, 255);
+
+    /* SHADOWS */
+    --wire-shadow: rgba(0, 0, 0, 0.35);
+    --wire-shadow-deep: rgba(0, 0, 0, 0.60);
+
+    /* STATUS COLORS */
+    --wire-success: rgb(104, 190, 143);
+    --wire-warning: rgb(224, 178, 94);
+    --wire-danger: rgb(255, 92, 125);
+}
 
 /* =====================================================
    WIRELAB — GLOBAL NAVIGATION
@@ -157,10 +194,9 @@ main,
     right: 0;
     width: 100%;
     padding: 0px 0;
-    z-index: 9999;
     background: transparent;
     pointer-events: none;
-    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    filter: drop-shadow(0 0 5px var(--wire-shadow));
 }
 
 
@@ -171,8 +207,6 @@ main,
     width: 100%;
     max-width: none;
     height: 34px;
-    margin-left: auto;
-    margin-right: auto;
     min-width: 0;
 
     margin: 0 auto;
@@ -261,7 +295,7 @@ main,
     border: 1px solid var(--wire-border);
     border-radius: 8px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 25px var(--wire-shadow-deep);
 
     z-index: 1000;
 }
@@ -280,7 +314,7 @@ main,
 
     padding: 10px 12px;
 
-    color: #ffffff;
+    color: var(--wire-text);
     text-decoration: none;
 
     font-size: 14px;
@@ -307,13 +341,15 @@ main,
 .nav-pro-avatar-frame {
     width: 29px;
     height: 29px;
-    transform: translate(-1px, 2px);
-    margin-left: 10px;
+    transform: translate(-1px, 1px);
+    margin-left: 13px;
     margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid transparent;
 }
+
 .nav-pro-avatar-frame:hover {
     background: var(--wire-hover-surface);
     border-color: var(--wire-accent);
@@ -326,22 +362,19 @@ main,
     object-fit: contain;
     margin-left: 7px;
     opacity: 0.5;
+    transition: opacity 0.2s ease;
+    transform: translate(-3px, 1px);
+}
+
+.wirelab-stencil-logo:hover img {
+    opacity: 1;
 }
 
 @media (max-width: 600px) {
     .wirelab-stencil-logo img {
         width: 20px;
         height: 20px;
-        opacity: 0.5;
     }
-
-.wirelab-stencil-logo img {
-    transition: opacity 0.2s ease;
-}
-
-.wirelab-stencil-logo:hover img {
-    opacity: 1;
-}
 }
 
 
@@ -449,7 +482,7 @@ SETTINGS BUTTON
     border: 1px solid transparent;
     border-radius: 4px;
     background: transparent;
-    color: var(--wire-text-muted);
+    color: var(--wire-text);
     font-size: 15px;
     line-height: 1;
     cursor: pointer;
@@ -478,7 +511,7 @@ SETTINGS BUTTON
     background: var(--wire-popup-window-bg);
     border: 1px solid var(--wire-border);
     border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 25px var(--wire-shadow-deep);
     z-index: 1000;
 }
 
@@ -489,7 +522,7 @@ SETTINGS BUTTON
 .settings-button-item {
     display: block;
     padding: 10px 12px;
-    color: #ffffff;
+    color: var(--wire-text);
     text-decoration: none;
     font-size: 14px;
     font-weight: 300;

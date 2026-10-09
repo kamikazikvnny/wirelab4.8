@@ -5,9 +5,12 @@
 
 const savedTheme = localStorage.getItem("wirelabTheme");
 
-if (savedTheme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
+if (savedTheme === "light" || savedTheme === "neon-royal") {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+} else {
+    document.documentElement.removeAttribute("data-theme");
 }
+
 
 
 
@@ -332,79 +335,46 @@ if (settingsButton && settingsButtonPanel) {
     const themeToggle =
         document.getElementById("theme-toggle-button");
 
-    if (themeToggle) {
+    const themes = ["dark", "light", "neon-royal"];
 
-        function updateThemeButton() {
+    
+if (themeToggle) {
 
-            const isLight =
-                document.documentElement.getAttribute("data-theme")
-                === "light";
+    function updateThemeButton() {
+        const currentTheme =
+            localStorage.getItem("wirelabTheme") || "dark";
 
-            if (isLight) {
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
 
-                themeToggle.textContent = "☾";
+        themeToggle.textContent = "☾";
+        themeToggle.setAttribute(
+            "aria-label",
+            `Switch to ${nextTheme} theme`
+        );
+        themeToggle.title = `Switch to ${nextTheme} theme`;
+    }
 
-                themeToggle.setAttribute(
-                    "aria-label",
-                    "Switch to dark theme"
-                );
+    updateThemeButton();
 
-                themeToggle.title =
-                    "Switch to dark theme";
+    themeToggle.addEventListener("click", function () {
+        const currentTheme =
+            localStorage.getItem("wirelabTheme") || "dark";
 
-            } else {
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
 
-                themeToggle.textContent = "☾";
-
-                themeToggle.setAttribute(
-                    "aria-label",
-                    "Switch to light theme"
-                );
-
-                themeToggle.title =
-                    "Switch to light theme";
-            }
+        if (nextTheme === "dark") {
+            document.documentElement.removeAttribute("data-theme");
+        } else {
+            document.documentElement.setAttribute("data-theme", nextTheme);
         }
 
-
+        localStorage.setItem("wirelabTheme", nextTheme);
         updateThemeButton();
+    });
+}
 
-
-        themeToggle.addEventListener("click", function () {
-
-            const isLight =
-                document.documentElement.getAttribute("data-theme")
-                === "light";
-
-
-            if (isLight) {
-
-                document.documentElement.removeAttribute(
-                    "data-theme"
-                );
-
-                localStorage.setItem(
-                    "wirelabTheme",
-                    "dark"
-                );
-
-            } else {
-
-                document.documentElement.setAttribute(
-                    "data-theme",
-                    "light"
-                );
-
-                localStorage.setItem(
-                    "wirelabTheme",
-                    "light"
-                );
-            }
-
-
-            updateThemeButton();
-        });
-    }
 
     /* stops page from jumping to the top when clicking bad links  */
     document.querySelectorAll('a[href="#"], a:not([href])').forEach(function (link) {
