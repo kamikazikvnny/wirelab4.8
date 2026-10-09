@@ -96,7 +96,7 @@
 
     background: var(--wire-bg);
 
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
 
     border: 1px solid var(--wire-border);
 
@@ -163,7 +163,7 @@
 
     background: var(--wire-hover);
 
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
 
 }
 
@@ -208,7 +208,7 @@
 
     line-height: 1.2;
 
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
 
 }
 

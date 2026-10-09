@@ -32,8 +32,9 @@ body {
 
     /* TEXT */
     --wire-text: rgb(205, 214, 220);
+    --wire-text-dim: rgb(229, 235, 239);
     --wire-text-muted: rgb(139, 151, 160);
-    --wire-text-bright: rgb(229, 235, 239);
+   
 
     /* BORDERS */
     --wire-border: rgb(49, 59, 67);
@@ -73,9 +74,9 @@ body {
 
     /* TEXT */
     --wire-text: rgb(48, 46, 41);
+    --wire-text-dim: rgb(31, 30, 27);
     --wire-text-muted: rgb(91, 85, 75);
-    --wire-text-bright: rgb(31, 30, 27);
-
+    
     /* BORDERS */
     --wire-border: rgb(151, 141, 123);
     --wire-border-accent: rgb(146, 94, 57);
@@ -113,9 +114,9 @@ body {
     --wire-popup-window-bg: rgba(25, 25, 28, 0.98);
 
     /* TEXT */
-    --wire-text: rgb(45, 45, 58);
-    --wire-text-muted: rgb(105, 105, 114);
-    --wire-text-bright: rgb(220, 220, 225);
+    --wire-text: rgb(160, 160, 160);
+    --wire-text-dim: rgb(190, 103, 191);
+    --wire-text-muted: rgb(103, 73, 103);
 
     /* BORDERS */
     --wire-border: rgb(66, 62, 69);
@@ -130,6 +131,7 @@ body {
     --wire-accent: rgb(190, 103, 191);
     --wire-accent-bright: rgb(207, 132, 207);
     --wire-accent-dim: rgba(112, 73, 114);
+    --wire-accent-glow: rgb(241, 190, 241);
 
     /* SHADOWS */
     --wire-shadow: rgba(0, 0, 0, 0.35);
@@ -332,7 +334,7 @@ main,
 }
 
 .nav-menu-item:hover {
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
     border-color: var(--wire-border-accent);
     background: var(--wire-hover-surface);
 }
@@ -427,7 +429,7 @@ main,
    NAV BUTTONS HOVER
 ===================================================== */
 .nav-button:hover {
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
     background: var(--wire-hover-surface);
     border-color: var(--wire-border-accent);
 }
@@ -436,7 +438,7 @@ main,
    NAV BUTTONS ACTIVE
 ===================================================== */
 .nav-button.active {
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
     background: var(--nav-button-active);
     border-color: var(--wire-accent);
 }
@@ -534,7 +536,7 @@ SETTINGS BUTTON
 }
 
 .settings-button-item:hover {
-    color: var(--wire-text-bright);
+    color: var(--wire-text-dim);
     border-color: var(--wire-border-accent);
     background: var(--wire-hover-surface);
 }

@@ -36,7 +36,7 @@
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 1.5px;
-    color: var(--wire-accent);
+    color: var(--wire-text-muted);
 }
 
 .home-hero h2 {
@@ -45,7 +45,7 @@
     font-weight: 300;
     line-height: 1.15;
     letter-spacing: 0;
-    color: var(--wire-text);
+    color: var(--wire-text-dim);
 }
 
 .home-hero p {
@@ -54,7 +54,7 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 1.5;
-    color: var(--wire-text-muted);
+    color: var(--wire-text);
 }
 
 
