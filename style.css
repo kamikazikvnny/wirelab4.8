@@ -1,33 +1,68 @@
 /* =========================================================
    HERO
 ========================================================= */
-.home-stencil-logo {
-    width: 180px;
-    height: auto;
-    margin: 0 auto 20px;
-    opacity: 0.8;
-    object-fit: contain;
-    transform: translateY(-20px);
-}
 
+
+/* Conventional way of organizing CSS */
 .home-hero {
-    position: relative;
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Sizing */
     width: 100%;
     min-height: 200px;
+
+    /* Spacing */
     margin-bottom: 16px;
-    display: flex;
-    align-items: flex-end;
+
+    /* Appearance */
+    background: var(--wire-surface);
     border: 1px solid var(--wire-border);
     border-radius: 6px;
-    background: var(--wire-surface);
-    box-shadow:
-        0 8px 24px var(--wire-shadow);
+    box-shadow: 0 8px 24px var(--wire-shadow);
+
+    /* Content */
+    text-align: center;
+
+    /* Positioning & Overflow */
+    position: relative;
     overflow: hidden;
 }
 
+
+/* HOMEPAGE STENCIL — THEME SWITCH */
+
+.home-stencil-logo-light {
+    display: none;
+}
+
+[data-theme="light"] .home-stencil-logo-dark {
+    display: none;
+}
+
+[data-theme="light"] .home-stencil-logo-light {
+    display: block;
+}
+
+
+.home-stencil-logo {
+    width: 180px;
+    height: auto;
+    opacity: 0.8;
+    object-fit: contain;
+    transform: translateY(0px);
+    margin-bottom: -10px;
+}
+
 .home-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    padding: 16px 18px;
+    padding-bottom: 10px;
 }
 
 .hero-label {
@@ -55,6 +90,8 @@
     font-weight: 300;
     line-height: 1.5;
     color: var(--wire-text);
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 

@@ -32,7 +32,7 @@ body {
 
     /* TEXT */
     --wire-text: rgb(205, 214, 220);
-    --wire-text-dim: rgb(229, 235, 239);
+    --wire-text-dim: rgb(66, 199, 181);
     --wire-text-muted: rgb(139, 151, 160);
    
 
@@ -62,24 +62,23 @@ body {
 
 /* =====================================================
    LIGHT THEME — WARM ALLOY
-   Stone / Bronze / Copper
 ===================================================== */
 [data-theme="light"] {
 
     /* BACKGROUNDS — layered depth */
-    --wire-bg: rgb(183, 177, 164);
-    --wire-surface: rgb(199, 191, 176);
-    --wire-card: rgb(216, 208, 193);
+    --wire-bg: rgb(183, 176, 167);
+    --wire-surface: rgb(215, 209, 200);
+    --wire-card: rgb(220, 217, 211);
     --wire-popup-window-bg: rgba(207, 198, 181, 0.98);
 
     /* TEXT */
-    --wire-text: rgb(48, 46, 41);
-    --wire-text-dim: rgb(31, 30, 27);
-    --wire-text-muted: rgb(91, 85, 75);
+    --wire-text: rgb(0, 0, 0);
+    --wire-text-dim: rgb(136, 101, 30);
+    --wire-text-muted: rgb(31, 29, 29);
     
     /* BORDERS */
-    --wire-border: rgb(151, 141, 123);
-    --wire-border-accent: rgb(146, 94, 57);
+    --wire-border: rgb(163, 136, 80);
+    --wire-border-accent: rgb(151, 118, 51);
 
     /* INTERACTIONS */
     --wire-hover: rgb(207, 197, 179);
@@ -114,17 +113,18 @@ body {
     --wire-popup-window-bg: rgba(25, 25, 28, 0.98);
 
     /* TEXT */
-    --wire-text: rgb(160, 160, 160);
+    --wire-text: rgb(223, 223, 223);
     --wire-text-dim: rgb(190, 103, 191);
-    --wire-text-muted: rgb(103, 73, 103);
+    --wire-text-muted: rgb(157, 80, 157);
+    --wire-text-muted2: rgb(160, 137, 160);
 
     /* BORDERS */
-    --wire-border: rgb(66, 62, 69);
-    --wire-border-accent: rgba(150, 109, 149)
+    --wire-border: rgb(160, 94, 210);
+    --wire-border-accent: rgb(85, 115, 205);
 
     /* INTERACTIONS */
-    --wire-hover: rgb(38, 35, 41);
-    --wire-hover-surface: rgba(194, 105, 196, 0.10);
+    --wire-hover: rgba(85, 115, 205, 0.149);
+    --wire-hover-surface: rgba(85, 115, 205, 0.371);
     --wire-active: rgba(194, 105, 196, 0.15);
 
     /* ACCENTS */
@@ -368,6 +368,7 @@ main,
     height: 62px;
     object-fit: contain;
     margin-left: 7px;
+    margin-bottom: 0;
     opacity: 0.5;
     transition: opacity 0.2s ease;
     transform: translate(-3px, 1px);

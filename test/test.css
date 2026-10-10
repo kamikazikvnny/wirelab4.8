@@ -1,21 +1,20 @@
 /* =========================================================
    WIRELAB — TEST PAGE
+   NEON ROYAL / GRAPHITE / ELECTRIC PURPLE
 ========================================================= */
-
 
 /* =========================================================
    TEST CONTENT
 ========================================================= */
-
 .test-content {
     padding-bottom: 40px;
+    color: var(--wire-text);
 }
 
 
 /* =========================================================
    PAGE INTRODUCTION
 ========================================================= */
-
 .test-intro {
     width: 100%;
     margin-bottom: 12px;
@@ -23,27 +22,18 @@
 
 .test-intro h2 {
     margin: 0;
-
-    font-family: "Rajdhani", sans-serif;
     font-size: 24px;
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 1.5px;
-
     color: var(--wire-text);
-
     text-transform: uppercase;
-
-    text-shadow:
-        0 0 10px var(--wire-text-glow);
 }
 
 .test-intro p {
-    margin: 6px 0 0 0;
-
+    margin: 6px 0 0;
     font-size: 12px;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
@@ -51,13 +41,10 @@
 /* =========================================================
    TEST GRID
 ========================================================= */
-
 .test-grid {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 12px;
 }
 
@@ -65,27 +52,17 @@
 /* =========================================================
    TEST CARDS
 ========================================================= */
-
 .test-card {
     width: 100%;
-
     padding: 16px;
 
+    background: var(--wire-card);
     border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.055),
-            rgba(255, 255, 255, 0.018)
-        );
+    border-radius: 5px;
 
     box-shadow:
-        0 8px 25px var(--wire-shadow),
-        inset 0 1px 0 var(--wire-highlight);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+        0 6px 18px var(--wire-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
 
     overflow: hidden;
 }
@@ -94,26 +71,22 @@
 /* =========================================================
    MAIN TEST CARD
 ========================================================= */
-
 .test-card-main {
     width: 100%;
     margin-top: -12px;
+    border-color: var(--wire-accent);
 }
 
 .test-card-header {
     width: 100%;
-
     padding-bottom: 14px;
-
     border-bottom: 1px solid var(--wire-border);
 }
 
 .card-label {
     display: block;
-
     margin-bottom: 4px;
 
-    font-family: "Rajdhani", sans-serif;
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 1.4px;
@@ -123,22 +96,17 @@
 
 .test-card h3 {
     margin: 0;
-
-    font-family: "Rajdhani", sans-serif;
     font-size: 21px;
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0.8px;
-
     color: var(--wire-text);
 }
 
 .test-card-header p {
-    margin: 6px 0 0 0;
-
+    margin: 6px 0 0;
     font-size: 12px;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
@@ -146,10 +114,8 @@
 /* =========================================================
    TEST AREA
 ========================================================= */
-
 .test-area {
     width: 100%;
-
     margin-top: 14px;
 }
 
@@ -157,41 +123,29 @@
 /* =========================================================
    TEST START
 ========================================================= */
-
 .test-start {
     width: 100%;
-
     padding: 18px 14px;
 
-    border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.035),
-            rgba(255, 255, 255, 0.012)
-        );
+    border: 1px solid var(--wire-border-accent);
+    border-radius: 4px;
+    background: var(--wire-surface);
 
     text-align: center;
 }
 
 .test-start h4 {
     margin: 0;
-
-    font-family: "Rajdhani", sans-serif;
     font-size: 19px;
     font-weight: 300;
     letter-spacing: 0.7px;
-
     color: var(--wire-text);
 }
 
 .test-start p {
-    margin: 7px 0 14px 0;
-
+    margin: 7px 0 14px;
     font-size: 12px;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
@@ -199,55 +153,52 @@
 /* =========================================================
    TEST BUTTONS
 ========================================================= */
-
 .test-button {
-    min-height: 30px;
-
+    min-height: 32px;
     padding: 0 14px;
 
-    border: 1px solid var(--wire-border);
+    border: 1px solid var(--wire-accent);
+    border-radius: 4px;
 
-    background: var(--wire-hover-surface);
-
+    background: rgba(160, 94, 210, 0.10);
     color: var(--wire-text);
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 11px;
     font-weight: 300;
     letter-spacing: 1px;
 
     cursor: pointer;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
 }
 
 .test-button:hover {
-    border-color: var(--wire-accent);
-    background: var(--wire-hover-surface);
-    color: var(--wire-text);
+    border-color: var(--wire-accent-bright);
+    background: rgba(160, 94, 210, 0.20);
+    color: var(--wire-accent-bright);
 }
 
 
 /* =========================================================
    QUESTION AREA
 ========================================================= */
-
 .question-area {
     width: 100%;
 }
 
 .question-progress {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 7px;
 
-    font-family: "Rajdhani", sans-serif;
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 1px;
-
     color: var(--wire-text-muted);
 }
 
@@ -259,30 +210,23 @@
 /* =========================================================
    QUESTION PROGRESS BAR
 ========================================================= */
-
 .progress-track {
     width: 100%;
-
-    height: 6px;
-
+    height: 7px;
     margin-bottom: 16px;
-
     overflow: hidden;
 
-    border: 1px solid var(--wire-border);
-
-    background: rgba(0, 0, 0, 0.20);
+    border: 1px solid var(--wire-border-accent);
+    border-radius: 4px;
+    background: rgb(17, 17, 20);
 }
 
 .progress-bar {
     width: 0%;
     height: 100%;
-
     background: var(--wire-accent);
 
-    box-shadow:
-        0 0 8px var(--wire-accent-glow);
-
+    box-shadow: 0 0 8px rgba(160, 94, 210, 0.35);
     transition: width 0.25s ease;
 }
 
@@ -290,15 +234,11 @@
 /* =========================================================
    QUESTION TEXT
 ========================================================= */
-
 .question-area h4 {
-    margin: 0 0 14px 0;
-
-    font-family: "Rajdhani", sans-serif;
+    margin: 0 0 14px;
     font-size: 19px;
     font-weight: 300;
     line-height: 1.35;
-
     color: var(--wire-text);
 }
 
@@ -306,68 +246,59 @@
 /* =========================================================
    ANSWER CHOICES
 ========================================================= */
-
 .answer-choices {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 8px;
 }
 
 .answer-choices button {
     width: 100%;
-
     min-height: 42px;
-
     padding: 9px 12px;
 
-    border: 1px solid var(--wire-border);
+    border: 1px solid var(--wire-border-accent);
+    border-radius: 4px;
 
-    background:
-        rgba(255, 255, 255, 0.025);
-
+    background: rgb(25, 25, 29);
     color: var(--wire-text);
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 300;
-
     text-align: left;
 
     cursor: pointer;
-
     transition:
         background 0.15s ease,
         border-color 0.15s ease;
 }
 
 .answer-choices button:not(:disabled):hover {
-    background: var(--wire-hover-surface);
+    background: rgba(85, 115, 205, 0.12);
     border-color: var(--wire-accent);
+}
+
+.answer-choices button:disabled {
+    cursor: default;
 }
 
 
 /* =========================================================
    ANSWER FEEDBACK
 ========================================================= */
-
 .answer-feedback {
     width: 100%;
-
     margin-top: 12px;
-
     padding: 10px 12px;
 
     border: 1px solid var(--wire-border);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.025);
 
-    background:
-        rgba(255, 255, 255, 0.075);
-    
     font-size: 12px;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
@@ -375,7 +306,6 @@
 /* =========================================================
    NEXT QUESTION
 ========================================================= */
-
 #nextQuestionButton {
     margin-top: 12px;
 }
@@ -384,42 +314,29 @@
 /* =========================================================
    TEST COMPLETE
 ========================================================= */
-
 .test-complete {
     width: 100%;
-
     padding: 20px 14px;
 
-    border: 1px solid var(--wire-border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.035),
-            rgba(255, 255, 255, 0.012)
-        );
+    border: 1px solid var(--wire-accent);
+    border-radius: 4px;
+    background: var(--wire-surface);
 
     text-align: center;
 }
 
 .test-complete h4 {
     margin: 0;
-
-    font-family: "Rajdhani", sans-serif;
     font-size: 22px;
     font-weight: 300;
     letter-spacing: 1px;
-
     color: var(--wire-text);
 }
 
 .test-complete p {
-    margin: 8px 0 14px 0;
-
-    font-family: "Rajdhani", sans-serif;
+    margin: 8px 0 14px;
     font-size: 16px;
     font-weight: 300;
-
     color: var(--wire-accent-bright);
 }
 
@@ -427,10 +344,8 @@
 /* =========================================================
    TEST PROGRESS
 ========================================================= */
-
 .test-progress {
     width: 100%;
-
     display: flex;
     gap: 8px;
 
@@ -442,39 +357,32 @@
 
 .test-progress > div {
     flex: 1 1 0;
-
     min-width: 0;
-
     padding: 10px 6px;
 
-    border: 1px solid var(--wire-border);
-
-    background:
-        rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--wire-border-accent);
+    border-radius: 4px;
+    background: var(--wire-surface);
 
     text-align: center;
 }
 
 .test-progress span {
     display: block;
-
     margin-bottom: 4px;
 
-    font-family: "Rajdhani", sans-serif;
     font-size: 9px;
     font-weight: 300;
     letter-spacing: 0.8px;
+    line-height: 1.4;
 
     color: var(--wire-text-muted);
 }
 
 .test-progress strong {
     display: block;
-
-    font-family: "Rajdhani", sans-serif;
     font-size: 19px;
     font-weight: 300;
-
     color: var(--wire-text);
 }
 
@@ -482,31 +390,33 @@
 /* =========================================================
    RESET
 ========================================================= */
-
 .reset-button {
     width: 100%;
-
-    min-height: 28px;
-
+    min-height: 30px;
     margin-top: 10px;
+    padding: 4px 10px;
 
     border: 1px solid var(--wire-border);
+    border-radius: 4px;
 
     background: transparent;
-
     color: var(--wire-text-muted);
 
-    font-family: "Rajdhani", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 1px;
 
     cursor: pointer;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
 }
 
 .reset-button:hover {
     border-color: var(--wire-accent);
-    background: var(--wire-hover-surface);
+    background: rgba(160, 94, 210, 0.08);
     color: var(--wire-text);
 }
 
@@ -514,59 +424,34 @@
 /* =========================================================
    FUTURE TEST CARDS
 ========================================================= */
-
 .test-card-medium,
 .test-card-small {
     width: 100%;
+    border-color: var(--wire-border);
+}
+
+.test-card-medium:hover,
+.test-card-small:hover {
+    border-color: var(--wire-border-accent);
 }
 
 .test-card-medium p,
 .test-card-small p {
-    margin: 7px 0 0 0;
-
+    margin: 7px 0 0;
     font-size: 12px;
     line-height: 1.5;
-
     color: var(--wire-text-muted);
 }
 
 
 /* =========================================================
-   SMALL PHONES
+   REDUCED MOTION
 ========================================================= */
-
-@media (max-width: 400px) {
-
-    .test-content {
-        padding-bottom: 30px;
-    }
-
-    .test-card {
-        padding: 13px;
-    }
-
-    .test-card h3 {
-        font-size: 19px;
-    }
-
-    .test-start,
-    .test-complete {
-        padding: 16px 12px;
-    }
-
-    .test-progress {
-        gap: 5px;
-    }
-
-    .test-progress > div {
-        padding: 9px 4px;
-    }
-
-    .test-progress span {
-        font-size: 8px;
-    }
-
-    .test-progress strong {
-        font-size: 17px;
+@media (prefers-reduced-motion: reduce) {
+    .test-button,
+    .answer-choices button,
+    .reset-button,
+    .progress-bar {
+        transition: none;
     }
 }
